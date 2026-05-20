@@ -1,75 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Web Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley's Stories</title>
+    <link rel="stylesheet" href="style-mobile.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="style.css" media="(min-width: 768px)">
 </head>
 <body>
-    <div id="title-container">
-            <h1>Welcome to Stanley's Web Page</h1>
-    </div>
+    <header class="main-header">
+        <div id="header-bar">
+            <span id="logo">Stanley's Stories</span>
+            <div id="menu-toggle"></div>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="Pages/library/index.html">Library</a></li>
+                <li><a href="Pages/about-Author/index.html">About Author</a></li>
+                <li><a href="https://stanstark.blogspot.com/">Blog Page</a></li>
+                <li><a href="https://www.youtube.com/@stanstark461">Youtube Channel</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="content-container">
-        <div id="book-rowthing">
-        <div class="book-container">
-            <img src="Art-stuff/Amanda-Giles-Lee.png" class="book-img">
-            <h2>Amanda Giles Lee</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/amanda-giles-lee/paperback/product-1mkw9r8z.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Courtland_1969-1971.png" class="book-img">
-            <h2>Courtland 1969-1971</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-book-4-courtland-1969-1971/ebook/product-1nq87kgw.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Fluhrer's-Big-Loaf-Bakery.png" class="book-img">
-            <h2>Fluhrer's Big Loaf Bakery</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/fluhrers-big-loaf-bakery/paperback/product-1nzr6gr9.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Grandma-and-Grandpa-Moody.png" class="book-img">
-            <h2>Grandma and Grandpa Moody</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/grandma-and-grandpa-moody/paperback/product-1wrww2j9.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Grandma-B.png" class="book-img">
-            <h2>Grandma B</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/grandma-b/paperback/product-1kkjrdem.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Martin's-Cove.png" class="book-img">
-            <h2>Martin's Cove</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/mission-of-stan-and-dorothy-stark-to-martins-cove/paperback/product-18r457yg.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Stan-and-Dorothy-Family.png" class="book-img">
-            <h2>Stan and Dorothy Family</h2>
-            <a href="https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-family/paperback/product-gj9vdmp.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        <div class="book-container">
-            <img src="Art-stuff/Terra-Bella.png" class="book-img">
-            <h2>Terra Bella</h2>
-            <a href="https://www.lulu.com/shop/stanley-l-stark/stan-and-dorothy-stark-in-terra-bella-1991-1994/paperback/product-7k9grwd.html?page=1&pageSize=4">Buy link</a>
-        </div>
-        </div>
-    </div>
+    <main class="main-content">
+        <section id="spotLight" class="layout-block">
+            <h2>Spotlight</h2>
+            <p>This section will be dedicated to showcasing a specific book or video.
+                It will include a brief description, cover image or thumbnail, and a link to read or watch the content.
+                I could try to set it up to pick a random book or video from the bookshelf or media sections
+                to feature, I could set it up to change automatically on a time schedule.
+            </p>
+        </section>
+        <section id="bookshelf" class="layout-block">
+            <h2>Bookshelf</h2>
+            <p>This section will display most or some of the books with a link to the library page at the end.
+                The books wil be in a scrollable horizontal row with the cover image and title of each book visible.
+                (Much like the previous website design)
+            </p>
+        </section>
+        <section id="aboutAuthor" class="layout-block">
+            <h2>About the Author</h2> 
+            <p>This section will provide information about the author.
+                (grandpa your going to have to write this part yourself, I don't know what you want to say about yourself)
+                It will also link to the about author page for more detailed information and contact details, or whatever else 
+                you want to share.
+            </p>
+        </section>
+        <section id="media" class="layout-block">
+            <h2>Media</h2>
+            <p>This section will showcase videos from the author's YouTube channel.
+                It will have a similar layout to the bookshelf section, with video thumbnails
+                and titles displayed in a scrollable horizontal row. There wil also to the Youtube Channel and blog page for more content.
 
-    <div id="menu-bar">
-        <div id="menu-mainButton"></div>
-        <div id="menu-expanded">
-            <div id="Pages-box">
-            <a href="#">Home Page</a>
-            <a href="Pages/Page1/index.html">Page 1</a>
-            <a href="Pages/Page2/index.html">Page 2</a>
-            <a href="Pages/Page3/index.html">Page 3</a>
-            </div>
-            <div id="Connections-box">
-            <a href="https://www.youtube.com/@stanstark461">Youtube</a>
-            <a href="https://stanstark.blogspot.com/">Blog Page</a>
-            </div>
-        </div>
-    </div>
+            </p>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
