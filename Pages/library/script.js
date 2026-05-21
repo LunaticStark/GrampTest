@@ -9,47 +9,65 @@ const library = [
     {
         id: 1,
         title: "Amanda Giles Lee",
-        coverImage: "../../Art-Stuff/Amanda-Giles-Lee.png"
+        coverImage: "../../Art-Stuff/Amanda-Giles-Lee.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/amanda-giles-lee/paperback/product-1mkw9r8z.html?page=1&pageSize=4",
+        description: "History of the Amanda Giles Lee and Robert Culpepper Lee family for 100 years from Anson County, North Carolina to Texas to Arizona and Colorado",
     },
     {
         id: 2,
         title: "Annetje Jans",
-        coverImage: "../../Art-Stuff/Annetje-Jans.png"
+        coverImage: "../../Art-Stuff/Annetje-Jans.png",
+        buyLink: "https://www.lulu.com/shop/stanley-l-stark/annetje-jans/paperback/product-1yzy82py.html?page=1&pageSize=4",
+        description: "Annetje Jans was accused of lifting her skirt while crossing a street, causing a flurry of gossip in Early New York.Settlers struggled to make a new world, but gossip and in-fighting was as much a part of New Amsterdam as was fighting the Indians. This is a concise  history of Annetje Jans, also known as Anneke Janse, Anna Weber, Anna Webber,Anneke Webber, Anna Jane Webber, Annetje Bogartus, one of the first New York settlers. This 15th Century American Woman Colonist of New Amsterdam  is ancestor to many, many thousands of Americans. This book contains information about many other New Amsterdam people as well.",
     },
     {
         id: 3,
         title: "Fluhrer's Big Loaf Bakery",
-        coverImage: "../../Art-Stuff/Fluhrer's-Big-Loaf-Bakery.png"
+        coverImage: "../../Art-Stuff/Fluhrer's-Big-Loaf-Bakery.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/fluhrers-big-loaf-bakery/paperback/product-1nzr6gr9.html?page=1&pageSize=4",
+        description: "Fluhrer's Bakery in the Humboldt County Redwoods was a major industry in Eureka from 1900 to 2000, in the Northern California area and had many employees. This book describes the experiences of Stan Stark who worked there on and off for 24 years, has pictures of most of the machines used  the last 40 years, and some from the 1930's. All employees of 1961 are listed with their pictures, and some others are included back to the 1940's. Includes other history of Big Loaf Bakery including Log Cabin Bakery and the final closing of the bakery. Many fantastic bakery pictures.",
     },
     {
         id: 4,
         title: "Grandma B",
-        coverImage: "../../Art-Stuff/Grandma-B.png"
+        coverImage: "../../Art-Stuff/Grandma-B.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/grandma-b/paperback/product-1kkjrdem.html?page=1&pageSize=4",
+        description: "Alta had six husbands and a troubled time as a young woman. But I did not know her until she was over 40 and had found the love of her life. George Bockhouse allowed her to become Grandma B. She was my favorite relative. When I went to her house as a child, I played under the sink using the pipes and valves as a steering wheel, for a car, submarine, airplane, even a rocket ship. To me her life was idyllic, and only when I was over 50 did I begin to realize how much pain she had endured.",
     },
     {
         id: 5,
         title: "Grandma & Grandpa Moody",
-        coverImage: "../../Art-Stuff/Grandma-and-Grandpa-Moody.png"
+        coverImage: "../../Art-Stuff/Grandma-and-Grandpa-Moody.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/grandma-and-grandpa-moody/paperback/product-1wrww2j9.html?page=1&pageSize=4",
+        description: "This is the story of Howard and Ella Moody. Ella asked her father to send her away to be a servant girl, because she didn't like the girl he had hired to be a servant in their home, Ella left her servant home to work as a cannery worker in Main. She married Howard Moody, and they went west to San Francisco, then north to Eureka, California. Howard homesteaded a ranch in the mountains of Humboldt and Trinity Counties near Alderpoint. Howard worked for the Northwestern Pacific Railroad during its heyday, cleaning up slides and repairing track from the floods of the Eel River. On his days off he built his ranch, and Howard and Ella raised eleven children in those mountains. The children rode the trains to high school. Ella moved to Eureka after Howard was killed in a train accident and lived in a little house across Glatt Street from Sequoia Park. Her grandchildren loved to play in the park among the giant redwood trees.",
     },
     {
         id: 6,
         title: "Mission of Stan & Dorothy Stark to Martin's Cove",
-        coverImage: "../../Art-Stuff/Martin's-Cove.png"
+        coverImage: "../../Art-Stuff/Martin's-Cove.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/mission-of-stan-and-dorothy-stark-to-martins-cove/paperback/product-18r457yg.html?page=1&pageSize=4",
+        description: "Stan and Dorothy Stark's experiences in Martin's Cove on the Old Mormon Trail.",
     },
     {
         id: 7,
         title: "Stan & Dorothy Family",
-        coverImage: "../../Art-Stuff/Stan-and-Dorothy-Family.png"
+        coverImage: "../../Art-Stuff/Stan-and-Dorothy-Family.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-family/paperback/product-gj9vdmp.html?page=1&pageSize=4",
+        description: "Stan and Dorothy Stark's first  twelve years together, with Theresa, Robby, Tommy, Cindy, Jeanette and Kyle, from 1957 to 1968.",
     },
     {
         id: 8,
         title: "Stan & Dorothy Stark in Terra Bella 1991-1994",
-        coverImage: "../../Art-Stuff/Terra-Bella.png"
+        coverImage: "../../Art-Stuff/Terra-Bella.png",
+        buyLink: "https://www.lulu.com/shop/stanley-l-stark/stan-and-dorothy-stark-in-terra-bella-1991-1994/paperback/product-7k9grwd.html?page=1&pageSize=4",
+        description: "Stan and Dorothy during their first four years at Terra Bella.",
     },
     {
         id: 9,
         title: "Stan & Dorothy: Book 4, Courtland 1969-1971 ",
-        coverImage: "../../Art-Stuff/Courtland_1969-1971.png"
+        coverImage: "../../Art-Stuff/Courtland_1969-1971.png",
+        buyLink: "https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-book-4-courtland-1969-1971/paperback/product-1e7mm4n6.html?page=1&pageSize=4",
+        description: "Two years in the life of Stanley and Dorothy Stark when they lived in Courtland, California from Sept. 1969 until August of 1971. Photos and letters.",
     },
 ]
 
@@ -67,6 +85,7 @@ function displayLibrary() {
 
         itemElement.addEventListener('click', () => {
             openInfoLayer(item);
+            window.scrollTo(0, 0);
         });
         mainContent.appendChild(itemElement);
     });
@@ -78,14 +97,19 @@ function openInfoLayer(book) {
     const infoImage = document.getElementById('info-image');
     const infoTitle = document.getElementById('info-title');
     const infoDescription = document.getElementById('info-description');
+    const infoBuyLink = document.getElementById('info-buy-link');
     const closeInfoButton = document.getElementById('close-info');
+    const menuToggle = document.getElementById('menu-toggle');
 
     infoImage.src = book.coverImage;
     infoTitle.innerText = book.title;
     infoDescription.innerText = book.description || "No description available.";
+    infoBuyLink.href = book.buyLink;
     infoLayer.classList.add('visible');
+   
 
     closeInfoButton.addEventListener('click', () => {
         infoLayer.classList.remove('visible');
+        window.scrollTo(0, 0);
     });
 }
