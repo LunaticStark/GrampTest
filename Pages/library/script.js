@@ -90,7 +90,6 @@ function displayLibrary() {
         mainContent.appendChild(itemElement);
     });
 }
-displayLibrary();
 
 function openInfoLayer(book) {
     const infoLayer = document.getElementById('info-layer');
@@ -112,4 +111,18 @@ function openInfoLayer(book) {
         infoLayer.classList.remove('visible');
         window.scrollTo(0, 0);
     });
+}
+
+displayLibrary();
+
+const urlParams = new URLSearchParams(window.location.search);
+const bookIndex = urlParams.get('book');
+
+if (bookIndex !== null) {
+    const index = parseInt(bookIndex, 10);
+    if (index >= 0 && index <= library.length) {
+        const selectedBook = library[index];
+        openInfoLayer(selectedBook);
+        window.scrollTo(0, 0);
+    }
 }
