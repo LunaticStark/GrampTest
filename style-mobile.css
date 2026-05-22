@@ -112,3 +112,66 @@ body {
     padding: 10px 20px;
     border-radius: 8px;
 }
+
+#media {
+    overflow-x: scroll;
+    height: 339px;
+}
+.filmstrip {
+   
+    width: 1405px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    position: relative;
+}
+.filmstrip::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Art-Stuff/vecteezy_filmstrip_1195071.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+.video-container {
+    width: 23%;
+    height: 55%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#video1 {
+    background-image: url("https://img.youtube.com/vi/V2FXntcrMtY/hqdefault.jpg");
+}
+#video2 {
+    background-image: url("https://img.youtube.com/vi/LsYW3fB81D8/hqdefault.jpg");
+}
+#video3 {
+    background-image: url("https://img.youtube.com/vi/oNmoAIs4Y7E/hqdefault.jpg");
+}
+.playbutton {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    z-index: 5;
+}
+#youtube-link {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 5;
+}
