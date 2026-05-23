@@ -158,8 +158,9 @@ body {
     height: 70vh;
     width: 80vw;
     overflow-y: scroll;
-    mask-image: linear-gradient(to bottom, transparent 0%,  #ddd7cc 20%, #ddd7cc 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%,  #ddd7cc 20%, #ddd7cc 80%, transparent 100%);
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
 }
 #preview-pages {
     height: max-content;

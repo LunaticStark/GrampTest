@@ -79,6 +79,7 @@ body {
     background-size: cover;
     background-position: center;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 #bookshelf-row {
     height: 100%;
@@ -115,6 +116,7 @@ body {
 
 #media {
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     height: 339px;
 }
 .filmstrip {
