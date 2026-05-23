@@ -159,8 +159,9 @@ body {
     width: 80vw;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
+    transform: translateZ(0);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
 }
 #preview-pages {
     height: max-content;
@@ -168,7 +169,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .preview-image {
     max-width: 90%;
