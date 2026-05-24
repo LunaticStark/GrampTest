@@ -25,6 +25,8 @@ body {
 #logo {
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 #menu-toggle {
     background: none;
@@ -55,5 +57,7 @@ body {
 #nav-menu li a {
     color: #1a1a1a;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: 'Baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }

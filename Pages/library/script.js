@@ -18,6 +18,7 @@ const library = [
         title: "Annetje Jans",
         coverImage: "../../Art-Stuff/book_covers/Annetje-Jans.png",
         buyLink: "https://www.lulu.com/shop/stanley-l-stark/annetje-jans/paperback/product-1yzy82py.html?page=1&pageSize=4",
+        buyLink2: "https://www.lulu.com/shop/stanley-l-stark/annetje-jans/ebook/product-1m4nqq28.html?page=1&pageSize=4",
         description: "Annetje Jans was accused of lifting her skirt while crossing a street, causing a flurry of gossip in Early New York.Settlers struggled to make a new world, but gossip and in-fighting was as much a part of New Amsterdam as was fighting the Indians. This is a concise  history of Annetje Jans, also known as Anneke Janse, Anna Weber, Anna Webber,Anneke Webber, Anna Jane Webber, Annetje Bogartus, one of the first New York settlers. This 15th Century American Woman Colonist of New Amsterdam  is ancestor to many, many thousands of Americans. This book contains information about many other New Amsterdam people as well.",
     },
     {
@@ -67,6 +68,7 @@ const library = [
         title: "Stan & Dorothy: Book 4, Courtland 1969-1971 ",
         coverImage: "../../Art-Stuff/book_covers/Courtland_1969-1971.png",
         buyLink: "https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-book-4-courtland-1969-1971/paperback/product-1e7mm4n6.html?page=1&pageSize=4",
+        buyLink2: "https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-book-4-courtland-1969-1971/ebook/product-1nq87kgw.html?page=1&pageSize=4",
         description: "Two years in the life of Stanley and Dorothy Stark when they lived in Courtland, California from Sept. 1969 until August of 1971. Photos and letters.",
     },
     {
@@ -109,7 +111,7 @@ const library = [
         title: "The Stark Family at San Lucas",
         coverImage: "../../Art-Stuff/book_covers/San-lucas.png",
         buyLink: "#",
-        description: "Stan and Dorothy stark, with hyle, Susy, Allison, Gooby/Stan, Ben, Ammon and Rebekah moved from Arcata to San Lucas in August of 1982. This book also includes the ;ast ha;f of thier life in Arcata. ",
+        description: "Stan and Dorothy stark, with hyle, Susy, Allison, Gooby/Stan, Ben, Ammon and Rebekah moved from Arcata to San Lucas in August of 1982. This book also includes the last half of thier life in Arcata. ",
     },
      {
         id: 16,
@@ -153,17 +155,24 @@ function openInfoLayer(book) {
     const infoTitle = document.getElementById('info-title');
     const infoDescription = document.getElementById('info-description');
     const infoBuyLink = document.getElementById('info-buy-link');
+    const infoBuyLink2 = document.getElementById('info-buy-link2');
+    const infoLinks = document.getElementById('info-links');
     const closeInfoButton = document.getElementById('close-info');
     const menuToggle = document.getElementById('menu-toggle');
 
     infoImage.src = book.coverImage;
     infoTitle.innerText = book.title;
     infoDescription.innerText = book.description || "No description available.";
-    infoBuyLink.href = book.buyLink;
+    infoBuyLink.href = book.buyLink || "#";
+    infoBuyLink2.href = book.buyLink2 || "#";
     if (book.buyLink === "#") {
-        infoBuyLink.style.display = 'none';
+        infoLinks.style.display = 'none';
     } else {
         infoBuyLink.style.display = 'inline-block';
+        infoBuyLink2.style.display = 'inline-block';
+        if (!book.buyLink2) {
+            infoBuyLink2.style.display = 'none';
+        }
     }
     infoLayer.classList.add('visible');
     mainContent.style.display = 'none';
