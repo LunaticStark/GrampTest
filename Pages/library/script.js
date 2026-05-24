@@ -12,6 +12,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Amanda-Giles-Lee.png",
         buyLink: "https://www.lulu.com/shop/stanley-stark/amanda-giles-lee/paperback/product-1mkw9r8z.html?page=1&pageSize=4",
         description: "History of the Amanda Giles Lee and Robert Culpepper Lee family for 100 years from Anson County, North Carolina to Texas to Arizona and Colorado",
+        previewPages: [
+            "../../Art-Stuff/book-pages/AGL/AGL-page1.png",
+            "../../Art-Stuff/book-pages/AGL/AGL-page2.png",
+            "../../Art-Stuff/book-pages/AGL/AGL-page3.png"
+        ],
     },
     {
         id: 2,
@@ -27,6 +32,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Fluhrer's-Big-Loaf-Bakery.png",
         buyLink: "https://www.lulu.com/shop/stanley-stark/fluhrers-big-loaf-bakery/paperback/product-1nzr6gr9.html?page=1&pageSize=4",
         description: "Fluhrer's Bakery in the Humboldt County Redwoods was a major industry in Eureka from 1900 to 2000, in the Northern California area and had many employees. This book describes the experiences of Stan Stark who worked there on and off for 24 years, has pictures of most of the machines used  the last 40 years, and some from the 1930's. All employees of 1961 are listed with their pictures, and some others are included back to the 1940's. Includes other history of Big Loaf Bakery including Log Cabin Bakery and the final closing of the bakery. Many fantastic bakery pictures.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/FBLB/FBLB-page1.png",
+            "../../Art-Stuff/book-pages/FBLB/FBLB-page2.png",
+            "../../Art-Stuff/book-pages/FBLB/FBLB-page3.png"
+        ],
     },
     {
         id: 4,
@@ -34,6 +44,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Grandma-B.png",
         buyLink: "https://www.lulu.com/shop/stanley-stark/grandma-b/paperback/product-1kkjrdem.html?page=1&pageSize=4",
         description: "Alta had six husbands and a troubled time as a young woman. But I did not know her until she was over 40 and had found the love of her life. George Bockhouse allowed her to become Grandma B. She was my favorite relative. When I went to her house as a child, I played under the sink using the pipes and valves as a steering wheel, for a car, submarine, airplane, even a rocket ship. To me her life was idyllic, and only when I was over 50 did I begin to realize how much pain she had endured.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/GB/GB-page1.png",
+            "../../Art-Stuff/book-pages/GB/GB-page2.png",
+            "../../Art-Stuff/book-pages/GB/GB-page3.png"
+        ],
     },
     {
         id: 5,
@@ -41,6 +56,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Grandma-and-Grandpa-Moody.png",
         buyLink: "https://www.lulu.com/shop/stanley-stark/grandma-and-grandpa-moody/paperback/product-1wrww2j9.html?page=1&pageSize=4",
         description: "This is the story of Howard and Ella Moody. Ella asked her father to send her away to be a servant girl, because she didn't like the girl he had hired to be a servant in their home, Ella left her servant home to work as a cannery worker in Main. She married Howard Moody, and they went west to San Francisco, then north to Eureka, California. Howard homesteaded a ranch in the mountains of Humboldt and Trinity Counties near Alderpoint. Howard worked for the Northwestern Pacific Railroad during its heyday, cleaning up slides and repairing track from the floods of the Eel River. On his days off he built his ranch, and Howard and Ella raised eleven children in those mountains. The children rode the trains to high school. Ella moved to Eureka after Howard was killed in a train accident and lived in a little house across Glatt Street from Sequoia Park. Her grandchildren loved to play in the park among the giant redwood trees.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/G&GM/G&GM-page1.png",
+            "../../Art-Stuff/book-pages/G&GM/G&GM-page2.png",
+            "../../Art-Stuff/book-pages/G&GM/G&GM-page3.png"
+        ],
     },
     {
         id: 6,
@@ -91,6 +111,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Larrry-elizabith-&-girls.png",
         buyLink: "#",
         description: "",
+        previewPages: [
+            "../../Art-Stuff/book-pages/LE&G/LE&G-page1.png",
+            "../../Art-Stuff/book-pages/LE&G/LE&G-page2.png",
+            "../../Art-Stuff/book-pages/LE&G/LE&G-page3.png"
+        ],
     },
      {
         id: 13,
@@ -98,6 +123,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Stan-&-Dorothy-Clarksburg.png",
         buyLink: "#",
         description: "",
+        previewPages: [
+            "../../Art-Stuff/book-pages/S&DIC/S&DIC-page1.png",
+            "../../Art-Stuff/book-pages/S&DIC/S&DIC-page2.png",
+            "../../Art-Stuff/book-pages/S&DIC/S&DIC-page3.png"
+        ],
     },
      {
         id: 14,
@@ -105,6 +135,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Stark&shoemaker-reunion.png",
         buyLink: "#",
         description: "",
+        previewPages: [
+            "../../Art-Stuff/book-pages/S_SFR/S_SFR-page1.png",
+            "../../Art-Stuff/book-pages/S_SFR/S_SFR-page2.png",
+            "../../Art-Stuff/book-pages/S_SFR/S_SFR-page3.png"
+        ],
     },
      {
         id: 15,
@@ -158,7 +193,11 @@ function openInfoLayer(book) {
     const infoBuyLink2 = document.getElementById('info-buy-link2');
     const infoLinks = document.getElementById('info-links');
     const closeInfoButton = document.getElementById('close-info');
-    const menuToggle = document.getElementById('menu-toggle');
+    const previewPages = document.getElementById('preview-pages');
+    const previewpage1 = document.getElementById('preview-1');
+    const previewpage2 = document.getElementById('preview-2');
+    const previewpage3 = document.getElementById('preview-3');
+
 
     infoImage.src = book.coverImage;
     infoTitle.innerText = book.title;
@@ -173,6 +212,13 @@ function openInfoLayer(book) {
         if (!book.buyLink2) {
             infoBuyLink2.style.display = 'none';
         }
+    }
+    if (book.previewPages) {
+        previewpage1.src = book.previewPages[0] || '';
+        previewpage2.src = book.previewPages[1] || '';
+        previewpage3.src = book.previewPages[2] || '';
+    } else  if (!book.previewPages) {
+        previewPages.style.display = 'none';
     }
     infoLayer.classList.add('visible');
     mainContent.style.display = 'none';
