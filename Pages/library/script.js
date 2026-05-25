@@ -193,7 +193,7 @@ function openInfoLayer(book) {
     const infoBuyLink2 = document.getElementById('info-buy-link2');
     const infoLinks = document.getElementById('info-links');
     const closeInfoButton = document.getElementById('close-info');
-    const previewPages = document.getElementById('preview-pages');
+    const previewBox = document.getElementById('preview-box');
     const previewpage1 = document.getElementById('preview-1');
     const previewpage2 = document.getElementById('preview-2');
     const previewpage3 = document.getElementById('preview-3');
@@ -206,20 +206,18 @@ function openInfoLayer(book) {
     infoBuyLink2.href = book.buyLink2 || "#";
     if (book.buyLink === "#") {
         infoLinks.style.display = 'none';
-    } else {
-        infoBuyLink.style.display = 'inline-block';
-        infoBuyLink2.style.display = 'inline-block';
-        if (!book.buyLink2) {
+    } else if (!book.buyLink2){
             infoBuyLink2.style.display = 'none';
-        }
     }
     if (book.previewPages) {
+        previewBox.classList.remove('hidden');
         previewpage1.src = book.previewPages[0] || '';
         previewpage2.src = book.previewPages[1] || '';
         previewpage3.src = book.previewPages[2] || '';
     } else  if (!book.previewPages) {
-        previewPages.style.display = 'none';
+        previewBox.classList.add('hidden');
     }
+    
     infoLayer.classList.add('visible');
     mainContent.style.display = 'none';
    
@@ -228,6 +226,11 @@ function openInfoLayer(book) {
         infoLayer.classList.remove('visible');
         window.scrollTo(0, 0);
         mainContent.style.display = 'grid';
+        previewpage1.src = '';
+        previewpage2.src = '';
+        previewpage3.src = '';
+        infoBuyLink2.style.display = "block";
+        infoLinks.style.display = 'flex';
     });
 }
 

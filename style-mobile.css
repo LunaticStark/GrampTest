@@ -74,6 +74,9 @@ body {
     justify-content: center;
     text-align: center;
 }
+#spotlight-com {
+   display: none;
+}
 
 #spotlight-content {
     width: 100%;
