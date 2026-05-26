@@ -210,7 +210,6 @@ function openInfoLayer(book) {
             infoBuyLink2.style.display = 'none';
     }
     if (book.previewPages) {
-        previewBox.classList.remove('hidden');
         previewpage1.src = book.previewPages[0] || '';
         previewpage2.src = book.previewPages[1] || '';
         previewpage3.src = book.previewPages[2] || '';

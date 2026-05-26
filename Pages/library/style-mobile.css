@@ -118,6 +118,7 @@ body {
     pointer-events: auto;
 }
 #info-content {
+    flex-shrink: 0;
     width: 100%;
     height: 100%;
     background-color: #ddd7cc;
@@ -192,9 +193,10 @@ body {
 }
 
 #preview-box {
-    height: 70vh;
+    max-height: 70dvh;
     width: 80vw;
     overflow-y: scroll;
+    flex-shrink: 0;
     -webkit-overflow-scrolling: touch;
     mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
 }
