@@ -96,7 +96,7 @@ const library = [
         title: "Colonial Ancestors of Stan & Dorothy Stark",
         coverImage: "../../Art-Stuff/book_covers/Colonial.png",
         buyLink: "#",
-        description: "",
+        description: "Into this world were born our Colonial Ancestors who took the freedoms they began to have and left their homes and came to America. Here are eight stories about those Ancestors.",
     },
      {
         id: 11,
@@ -224,6 +224,7 @@ function openInfoLayer(book) {
 
     closeInfoButton.addEventListener('click', () => {
         infoLayer.classList.remove('visible');
+        previewBox.classList.remove('hidden')
         window.scrollTo(0, 0);
         mainContent.style.display = 'grid';
         previewpage1.src = '';
