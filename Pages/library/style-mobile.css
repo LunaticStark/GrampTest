@@ -196,7 +196,6 @@ body {
     width: 80vw;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    transform: translateZ(0);
     mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
 }
 #preview-box.hidden {
