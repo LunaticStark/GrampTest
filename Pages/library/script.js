@@ -82,6 +82,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Terra-Bella.png",
         buyLink: "https://www.lulu.com/shop/stanley-l-stark/stan-and-dorothy-stark-in-terra-bella-1991-1994/paperback/product-7k9grwd.html?page=1&pageSize=4",
         description: "Stan and Dorothy during their first four years at Terra Bella.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/S&DITB/S&DITB-page1.png",
+            "../../Art-Stuff/book-pages/S&DITB/S&DITB-page2.png",
+            "../../Art-Stuff/book-pages/S&DITB/S&DITB-page3.png"
+        ],
     },
     {
         id: 9,
@@ -90,6 +95,11 @@ const library = [
         buyLink: "https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-book-4-courtland-1969-1971/paperback/product-1e7mm4n6.html?page=1&pageSize=4",
         buyLink2: "https://www.lulu.com/shop/stanley-stark/stan-and-dorothy-book-4-courtland-1969-1971/ebook/product-1nq87kgw.html?page=1&pageSize=4",
         description: "Two years in the life of Stanley and Dorothy Stark when they lived in Courtland, California from Sept. 1969 until August of 1971. Photos and letters.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/S&DB4C/S&DB4C-page1.png",
+            "../../Art-Stuff/book-pages/S&DB4C/S&DB4C-page2.png",
+            "../../Art-Stuff/book-pages/S&DB4C/S&DB4C-page3.png"
+        ],
     },
     {
         id: 10,
@@ -97,6 +107,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Colonial.png",
         buyLink: "#",
         description: "Into this world were born our Colonial Ancestors who took the freedoms they began to have and left their homes and came to America. Here are eight stories about those Ancestors.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/CAOS&D/CAOS&D-page1.png",
+            "../../Art-Stuff/book-pages/CAOS&D/CAOS&D-page2.png",
+            "../../Art-Stuff/book-pages/CAOS&D/CAOS&D-page3.png"
+        ],
     },
      {
         id: 11,
@@ -104,6 +119,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Exodus-of-Terra-Bella.png",
         buyLink: "#",
         description: "",
+        previewPages: [
+            "../../Art-Stuff/book-pages/ETTB/ETTB-page1.png",
+            "../../Art-Stuff/book-pages/ETTB/ETTB-page2.png",
+            "../../Art-Stuff/book-pages/ETTB/ETTB-page3.png"
+        ],
     },
      {
         id: 12,
@@ -147,6 +167,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/San-lucas.png",
         buyLink: "#",
         description: "Stan and Dorothy stark, with hyle, Susy, Allison, Gooby/Stan, Ben, Ammon and Rebekah moved from Arcata to San Lucas in August of 1982. This book also includes the last half of thier life in Arcata. ",
+        previewPages: [
+            "../../Art-Stuff/book-pages/TSFASL/TSFASL-page1.png",
+            "../../Art-Stuff/book-pages/TSFASL/TSFASL-page2.png",
+            "../../Art-Stuff/book-pages/TSFASL/TSFASL-page3.png"
+        ],
     },
      {
         id: 16,
@@ -154,6 +179,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Tom-Eunice-&-Family.png",
         buyLink: "#",
         description: "",
+        previewPages: [
+            "../../Art-Stuff/book-pages/TE&F/TE&F-page1.png",
+            "../../Art-Stuff/book-pages/TE&F/TE&F-page2.png",
+            "../../Art-Stuff/book-pages/TE&F/TE&F-page3.png"
+        ],
     },
      {
         id: 17,
@@ -161,6 +191,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Victoria-&-the-Mormons.png",
         buyLink: "#",
         description: "Victoria has no plans for her longterm future, in fact she hasn't thought about it. One of the missionaries of the Church of Jesus Christ of Latter-day Saints she accidentally met has a skilled professional assassin hunting him. Victoria (not a member and not completely without guile) meets others who help her, but because of her innocence gets wrapped up in the assassin's plans and plots anyway.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/VATM/VATM-page1.png",
+            "../../Art-Stuff/book-pages/VATM/VATM-page2.png",
+            "../../Art-Stuff/book-pages/VATM/VATM-page3.png"
+        ],
     },
 ]
 
