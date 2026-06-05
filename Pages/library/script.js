@@ -1,3 +1,4 @@
+const ismobile = window.innerWidth <= 768;
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 
@@ -130,7 +131,7 @@ const library = [
         title: "Larry, Elizabeth & Girls",
         coverImage: "../../Art-Stuff/book_covers/Larrry-elizabith-&-girls.png",
         buyLink: "#",
-        description: "",
+        description: "History of Larry and Elizabeth Shoemaker, and their family. Including th",
         previewPages: [
             "../../Art-Stuff/book-pages/LE&G/LE&G-page1.png",
             "../../Art-Stuff/book-pages/LE&G/LE&G-page2.png",
@@ -142,7 +143,7 @@ const library = [
         title: "Stan & Dorothy in Clarksburg",
         coverImage: "../../Art-Stuff/book_covers/Stan-&-Dorothy-Clarksburg.png",
         buyLink: "#",
-        description: "",
+        description: "Stan and Dorothy's time in Clarksburg, California from August 1971 to August 1981.",
         previewPages: [
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page1.png",
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page2.png",
@@ -154,7 +155,7 @@ const library = [
         title: "Stark/Shoemaker Family Reunion 2017",
         coverImage: "../../Art-Stuff/book_covers/Stark&shoemaker-reunion.png",
         buyLink: "#",
-        description: "",
+        description: "While more of a brochure than a book, this booklet contains some photos and stories of Stan and Dorothy's history in Eureka. ",
         previewPages: [
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page1.png",
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page2.png",
@@ -178,7 +179,7 @@ const library = [
         title: "Tom, Eunice & Family",
         coverImage: "../../Art-Stuff/book_covers/Tom-Eunice-&-Family.png",
         buyLink: "#",
-        description: "",
+        description: "A collection of tales and stories about Tom and Eunice Stark, their children and grandchildren.",
         previewPages: [
             "../../Art-Stuff/book-pages/TE&F/TE&F-page1.png",
             "../../Art-Stuff/book-pages/TE&F/TE&F-page2.png",
@@ -197,12 +198,79 @@ const library = [
             "../../Art-Stuff/book-pages/VATM/VATM-page3.png"
         ],
     },
+     {
+        id: 18,
+        title: "Trijntie Jonas",
+        coverImage: "../../Art-Stuff/book_covers/Trijntie-Jonas.png",
+        buyLink: "#",
+        description: "",
+    },
+     {
+        id: 19,
+        title: "The War for Independence",
+        coverImage: "../../Art-Stuff/book_covers/TWFI.png",
+        buyLink: "#",
+        description: "",
+    },
+     {
+        id: 20,
+        title: "Private Purinton",
+        coverImage: "../../Art-Stuff/book_covers/Private-purinton.png",
+        buyLink: "#",
+        description: "",
+    },
+     {
+        id: 21,
+        title: "Sheriff Shoemaker",
+        coverImage: "../../Art-Stuff/book_covers/Sheriff-shoemaker.png",
+        buyLink: "#",
+        description: "",
+    }, {
+        id: 22,
+        title: "Stan & Dorothy at the Salt Lake Temple",
+        coverImage: "../../Art-Stuff/book_covers/Salt-lake-temple.png",
+        buyLink: "#",
+        description: "",
+    }, {
+        id: 23,
+        title: "John Stark & the Donner Party",
+        coverImage: "../../Art-Stuff/book_covers/John-stark.png",
+        buyLink: "#",
+        description: "",
+    },
+     {
+        id: 24,
+        title: "California Here I Come",
+        coverImage: "../../Art-Stuff/book_covers/California.png",
+        buyLink: "#",
+        description: "",
+    },
+     {
+        id: 25,
+        title: "The Missourian",
+        coverImage: "../../Art-Stuff/book_covers/The-missourian.png",
+        buyLink: "#",
+        description: "",
+    },
 ]
 
 const mainContent = document.querySelector('.main-content');
+const buyableLibrary = document.getElementById('buyable-library');
+const nonBuyableLibrary = document.getElementById('non-buyable-library');
+const buyableButton = document.getElementById('buyable-button');
+const nonBuyableButton = document.getElementById('non-buyable-button');
+
+buyableButton.addEventListener('click', () => {
+    buyableLibrary.classList.toggle('visible');
+    nonBuyableLibrary.classList.remove('visible');
+});
+
+nonBuyableButton.addEventListener('click', () => {
+    nonBuyableLibrary.classList.toggle('visible');
+    buyableLibrary.classList.add('visible');
+});
 
 function displayLibrary() {
-    mainContent.innerHTML = '';
     library.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('library-item');
@@ -215,7 +283,15 @@ function displayLibrary() {
             openInfoLayer(item);
             window.scrollTo(0, 0);
         });
-        mainContent.appendChild(itemElement);
+        if (ismobile) {
+            if (item.buyLink === "#") {
+                nonBuyableLibrary.appendChild(itemElement);
+            } else {
+                buyableLibrary.appendChild(itemElement);
+            }
+        } else if (!ismobile) {
+            mainContent.appendChild(itemElement);
+        }
     });
 }
 
