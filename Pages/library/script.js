@@ -1,4 +1,3 @@
-const ismobile = window.innerWidth <= 768;
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 
@@ -131,7 +130,7 @@ const library = [
         title: "Larry, Elizabeth & Girls",
         coverImage: "../../Art-Stuff/book_covers/Larrry-elizabith-&-girls.png",
         buyLink: "#",
-        description: "History of Larry and Elizabeth Shoemaker, and their family. Including th",
+        description: "",
         previewPages: [
             "../../Art-Stuff/book-pages/LE&G/LE&G-page1.png",
             "../../Art-Stuff/book-pages/LE&G/LE&G-page2.png",
@@ -143,7 +142,7 @@ const library = [
         title: "Stan & Dorothy in Clarksburg",
         coverImage: "../../Art-Stuff/book_covers/Stan-&-Dorothy-Clarksburg.png",
         buyLink: "#",
-        description: "Stan and Dorothy's time in Clarksburg, California from August 1971 to August 1981.",
+        description: "",
         previewPages: [
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page1.png",
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page2.png",
@@ -155,7 +154,7 @@ const library = [
         title: "Stark/Shoemaker Family Reunion 2017",
         coverImage: "../../Art-Stuff/book_covers/Stark&shoemaker-reunion.png",
         buyLink: "#",
-        description: "While more of a brochure than a book, this booklet contains some photos and stories of Stan and Dorothy's history in Eureka. ",
+        description: "",
         previewPages: [
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page1.png",
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page2.png",
@@ -179,7 +178,7 @@ const library = [
         title: "Tom, Eunice & Family",
         coverImage: "../../Art-Stuff/book_covers/Tom-Eunice-&-Family.png",
         buyLink: "#",
-        description: "A collection of tales and stories about Tom and Eunice Stark, their children and grandchildren.",
+        description: "",
         previewPages: [
             "../../Art-Stuff/book-pages/TE&F/TE&F-page1.png",
             "../../Art-Stuff/book-pages/TE&F/TE&F-page2.png",
@@ -200,98 +199,86 @@ const library = [
     },
      {
         id: 18,
-        title: "Trijntie Jonas",
+        title: "Trijntje Jonas",
         coverImage: "../../Art-Stuff/book_covers/Trijntie-Jonas.png",
         buyLink: "#",
-        description: "",
+        description: "Trijnjte Jonas was a real woman who once was a little girl. She grew up in a family with a mother and a father. She got married and had children. After her husband died, she left the country she lived in and crossed the Atlantic Ocean to a New world.",
     },
      {
         id: 19,
         title: "The War for Independence",
         coverImage: "../../Art-Stuff/book_covers/TWFI.png",
         buyLink: "#",
-        description: "",
+        description: "Where were our ancestors when the single shot was fired that ignited the of the American Colonies against the British Empire?",
     },
      {
         id: 20,
         title: "Private Purinton",
         coverImage: "../../Art-Stuff/book_covers/Private-purinton.png",
         buyLink: "#",
-        description: "",
+        description: "Every person who is alive today has ancestors who lived during the time of the Civil War. Private Purinton is one of those ancestors, he was a Union soldier who fought in the Civil War, and his story is a fascinating one. ",
     },
      {
         id: 21,
         title: "Sheriff Shoemaker",
         coverImage: "../../Art-Stuff/book_covers/Sheriff-shoemaker.png",
         buyLink: "#",
-        description: "",
+        description: "The sheriff of Gentry county Missouri, William Burris Shoemake, left home on may 1, 1866 at about 10 o'clock a.m. to track down some cattle. He was then going to Howe's Mill, but he never got there. ",
     }, {
         id: 22,
         title: "Stan & Dorothy at the Salt Lake Temple",
         coverImage: "../../Art-Stuff/book_covers/Salt-lake-temple.png",
         buyLink: "#",
-        description: "",
+        description: "I got the idea that morning, October 29, 1961. I counted all the spare cash we had, it came to thirty dollars. I figured the miles from Eureka to Salt Lake City, and from Eureka to Los Angeles. it was over a thousannd miles one way to either temple. There where no other temples in California in 1961. There where a lot fewer freeways in 1961. ",
     }, {
         id: 23,
         title: "John Stark & the Donner Party",
         coverImage: "../../Art-Stuff/book_covers/John-stark.png",
         buyLink: "#",
-        description: "",
+        description: "Many people left for west in the season of 1846. John Stark, who was about 29 and born in Wayne County, Indiana, was one of them. He was not one of our direct ancestors, but was the brother of Andrew Jackson who was. Andrew did not come to California until 1861.",
     },
      {
         id: 24,
         title: "California Here I Come",
         coverImage: "../../Art-Stuff/book_covers/California.png",
         buyLink: "#",
-        description: "",
+        description: "This book is about Dorothy and my ancestors and is written to our children. This is about how they came to California. I have searched census records, talked with older people who knew the people involved, and studied diary's and other people's work on the era. My purpose is to get our children to understand the lives and journeys of thier ancestors, and try to inspire some of them to write more about these people to complete and expand this work, or rewrite it. I would like you to feel what it was like to cross the country with your ancestors. ",
     },
      {
         id: 25,
         title: "The Missourian",
         coverImage: "../../Art-Stuff/book_covers/The-missourian.png",
         buyLink: "#",
-        description: "",
+        description: "This story is set in the time and place of the march of the all volunteer Army of the west. Sent down to push the Mexicans back into Mexico (even though they really never left), and claim the ground all the way to the Pacific. Most of the characters in this story really lived (I took thier names from rosters and rolls) and the main incidents are real (including the fight in the first chapter). I think you can tell whichh parts are true and which are fiction. To help, I've placed a bibliography and a list of facts I worked from.  ",
     },
 ]
 
 const mainContent = document.querySelector('.main-content');
-const buyableLibrary = document.getElementById('buyable-library');
-const nonBuyableLibrary = document.getElementById('non-buyable-library');
-const buyableButton = document.getElementById('buyable-button');
-const nonBuyableButton = document.getElementById('non-buyable-button');
-
-buyableButton.addEventListener('click', () => {
-    buyableLibrary.classList.toggle('visible');
-    nonBuyableLibrary.classList.remove('visible');
-});
-
-nonBuyableButton.addEventListener('click', () => {
-    nonBuyableLibrary.classList.toggle('visible');
-    buyableLibrary.classList.add('visible');
-});
 
 function displayLibrary() {
     library.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('library-item');
-        itemElement.innerHTML = `   
+        
+        if (item.buyLink === "#") { 
+            itemElement.innerHTML = `   
             <img src="${item.coverImage}" alt="${item.title} cover" class="library-cover">
             <h3 class="library-title">${item.title}</h3>
-        `;
+        `; } else if (item.buyLink !== "#" && !item.buyLink2) {
+            itemElement.innerHTML = `   
+            <img src="${item.coverImage}" alt="${item.title} cover" class="library-cover">
+            <h3 class="library-title">${item.title} &#9734;</h3>
+        `; } else {
+            itemElement.innerHTML = `   
+            <img src="${item.coverImage}" alt="${item.title} cover" class="library-cover">
+            <h3 class="library-title">${item.title} &#9733;</h3>
+        `; }
 
         itemElement.addEventListener('click', () => {
             openInfoLayer(item);
             window.scrollTo(0, 0);
         });
-        if (ismobile) {
-            if (item.buyLink === "#") {
-                nonBuyableLibrary.appendChild(itemElement);
-            } else {
-                buyableLibrary.appendChild(itemElement);
-            }
-        } else if (!ismobile) {
-            mainContent.appendChild(itemElement);
-        }
+        mainContent.appendChild(itemElement);
     });
 }
 

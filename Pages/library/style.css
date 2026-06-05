@@ -56,11 +56,6 @@ body {
     text-decoration: underline;
 }
 
-.library-container {
-    position: absolute;
-    display: none;
-    pointer-events: none;
-}
 
 .main-content {
     margin-left: auto;
@@ -68,19 +63,26 @@ body {
     width: 95%;
     max-width: 1200px;
     height: max-content;
-    padding-bottom: 50px;
     margin-top: 50px;
+    padding-bottom: 70px;
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
     align-items: center;
     justify-items: center;
-    gap: 20px;
+    gap: 10px;
+}
+#note {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .library-item {
     width: 80%;
     height: max-content;
-    max-height: 350px;
-    margin-top: 50px;
+    margin-top: 20px;
    
     display: flex;
     flex-direction: column;
@@ -93,7 +95,7 @@ body {
 }
 .library-cover {
     width: 100%;
-    max-height: 350px;
+    max-height: 80%;
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -154,6 +156,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.7);
+     -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 #info-title {
     color: #1a1a1a;
@@ -256,4 +262,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.7);
+     -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }

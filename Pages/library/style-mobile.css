@@ -34,7 +34,6 @@ body {
     padding: 12px 12px;
     border-radius: 12px;
     font-size: .9rem;
-    margin-right: 20px;
 }
 #nav-menu {
     background-color: #ddd7cc;
@@ -66,70 +65,19 @@ body {
 
 
 .main-content {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    z-index: 1;
-}
-.library-container {
-    height: max-content;
-    width: 100%;
-    
-}
-.library-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #6b1d2f;
-}
-.library-header span {
-    color: #ddd7cc;
-    font-size: 36px;
-    margin: 20px;
-    text-align: center;
-    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-.library-button {
-    background: none;
-    border: 1px solid #ddd7cc;
-    padding: 16px 16px;
-    border-radius: 16px;
-    font-size: .9rem;
-    margin-right: 20px;
-}
-.library-contents {
-    background-color: #ddd7cc;
-    height: max-content;
-    max-height: 70dvh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-    gap: 15px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    transition: transform 0.3s ease-in-out;
-    mask-image: linear-gradient(to bottom, transparent 0%,  black 20%, black 80%, transparent 100%);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
-#buyable-library, #non-buyable-library.visible {
-    position: relative;
-    opacity: 1;
-    pointer-events: auto;
-    transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
+#note {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1rem;
+    color: #1a1a1a;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-#non-buyable-library, #buyable-library.visible {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-
-
 .library-item {
     padding: 10px;
     display: flex;
@@ -163,7 +111,7 @@ body {
     width: 100%;
     height: max-content;
     background-color: #ddd7cc;
-    z-index: -1;
+    z-index: 500;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,7 +123,6 @@ body {
 #info-layer.visible {
     opacity: 1;
     pointer-events: auto;
-    z-index: 500;
 }
 #info-content {
     flex-shrink: 0;
