@@ -25,6 +25,11 @@ const library = [
         buyLink: "https://www.lulu.com/shop/stanley-l-stark/annetje-jans/paperback/product-1yzy82py.html?page=1&pageSize=4",
         buyLink2: "https://www.lulu.com/shop/stanley-l-stark/annetje-jans/ebook/product-1m4nqq28.html?page=1&pageSize=4",
         description: "Annetje Jans was accused of lifting her skirt while crossing a street, causing a flurry of gossip in Early New York.Settlers struggled to make a new world, but gossip and in-fighting was as much a part of New Amsterdam as was fighting the Indians. This is a concise  history of Annetje Jans, also known as Anneke Janse, Anna Weber, Anna Webber,Anneke Webber, Anna Jane Webber, Annetje Bogartus, one of the first New York settlers. This 15th Century American Woman Colonist of New Amsterdam  is ancestor to many, many thousands of Americans. This book contains information about many other New Amsterdam people as well.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/AJ/AJ-page1.png",
+            "../../Art-Stuff/book-pages/AJ/AJ-page2.png",
+            "../../Art-Stuff/book-pages/AJ/AJ-page3.png"
+        ],
     },
     {
         id: 3,
@@ -118,7 +123,7 @@ const library = [
         title: "Exodus to Terra Bella",
         coverImage: "../../Art-Stuff/book_covers/Exodus-of-Terra-Bella.png",
         buyLink: "#",
-        description: "",
+        description: "An Exodus is a long trip with detours and many stops, sometimes you don't even know the final destination. We left Eureka in August of 1967 with our whole family (Dorothy and I, Theresa, Rob, Tom and Jeanette) and arived here in Terra Bella in the December of 1990, only 27 years later. It would take us 181 hour to walk and is 547 miles, or about 9 hours by car, but took us 27 years to get here. Our lives have been filled with miracles throughout that time.",
         previewPages: [
             "../../Art-Stuff/book-pages/ETTB/ETTB-page1.png",
             "../../Art-Stuff/book-pages/ETTB/ETTB-page2.png",
@@ -130,7 +135,7 @@ const library = [
         title: "Larry, Elizabeth & Girls",
         coverImage: "../../Art-Stuff/book_covers/Larrry-elizabith-&-girls.png",
         buyLink: "#",
-        description: "",
+        description: "Grandma and Grandpa Shoemaker are Elizabeth Davis and Larry or Lawrence Shoemaker. Frances, Edna, Dorothy and Betty Shoemakerare their daughters, the Shoemaker Girls.",
         previewPages: [
             "../../Art-Stuff/book-pages/LE&G/LE&G-page1.png",
             "../../Art-Stuff/book-pages/LE&G/LE&G-page2.png",
@@ -142,7 +147,7 @@ const library = [
         title: "Stan & Dorothy in Clarksburg",
         coverImage: "../../Art-Stuff/book_covers/Stan-&-Dorothy-Clarksburg.png",
         buyLink: "#",
-        description: "",
+        description: "Stan and Dorothy's time in Clarksburg, California from August 1971 to August 1981.",
         previewPages: [
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page1.png",
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page2.png",
@@ -154,7 +159,7 @@ const library = [
         title: "Stark/Shoemaker Family Reunion 2017",
         coverImage: "../../Art-Stuff/book_covers/Stark&shoemaker-reunion.png",
         buyLink: "#",
-        description: "",
+        description: "While more of a brochure than a book, this booklet contains some photos and stories of Stan and Dorothy's history in Eureka.",
         previewPages: [
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page1.png",
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page2.png",
@@ -178,7 +183,7 @@ const library = [
         title: "Tom, Eunice & Family",
         coverImage: "../../Art-Stuff/book_covers/Tom-Eunice-&-Family.png",
         buyLink: "#",
-        description: "",
+        description: "A collection of tales and stories about Tom and Eunice Stark, their children and grandchildren.",
         previewPages: [
             "../../Art-Stuff/book-pages/TE&F/TE&F-page1.png",
             "../../Art-Stuff/book-pages/TE&F/TE&F-page2.png",
@@ -210,6 +215,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/TWFI.png",
         buyLink: "#",
         description: "Where were our ancestors when the single shot was fired that ignited the of the American Colonies against the British Empire?",
+        previewPages: [
+            "../../Art-Stuff/book-pages/TWFI/TWFI-page1.png",
+            "../../Art-Stuff/book-pages/TWFI/TWFI-page2.png",
+            "../../Art-Stuff/book-pages/TWFI/TWFI-page3.png"
+        ],
     },
      {
         id: 20,
@@ -217,6 +227,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Private-purinton.png",
         buyLink: "#",
         description: "Every person who is alive today has ancestors who lived during the time of the Civil War. Private Purinton is one of those ancestors, he was a Union soldier who fought in the Civil War, and his story is a fascinating one. ",
+        previewPages: [
+            "../../Art-Stuff/book-pages/PP/PP-page1.png",
+            "../../Art-Stuff/book-pages/PP/PP-page2.png",
+            "../../Art-Stuff/book-pages/PP/PP-page3.png"
+        ],
     },
      {
         id: 21,
@@ -224,18 +239,33 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/Sheriff-shoemaker.png",
         buyLink: "#",
         description: "The sheriff of Gentry county Missouri, William Burris Shoemake, left home on may 1, 1866 at about 10 o'clock a.m. to track down some cattle. He was then going to Howe's Mill, but he never got there. ",
+        previewPages: [
+            "../../Art-Stuff/book-pages/SS/SS-page1.png",
+            "../../Art-Stuff/book-pages/SS/SS-page2.png",
+            "../../Art-Stuff/book-pages/SS/SS-page3.png"
+        ],
     }, {
         id: 22,
         title: "Stan & Dorothy at the Salt Lake Temple",
         coverImage: "../../Art-Stuff/book_covers/Salt-lake-temple.png",
         buyLink: "#",
         description: "I got the idea that morning, October 29, 1961. I counted all the spare cash we had, it came to thirty dollars. I figured the miles from Eureka to Salt Lake City, and from Eureka to Los Angeles. it was over a thousannd miles one way to either temple. There where no other temples in California in 1961. There where a lot fewer freeways in 1961. ",
+        previewPages: [
+            "../../Art-Stuff/book-pages/S&DSLT/S&DSLT-page1.png",
+            "../../Art-Stuff/book-pages/S&DSLT/S&DSLT-page2.png",
+            "../../Art-Stuff/book-pages/S&DSLT/S&DSLT-page3.png"
+        ],
     }, {
         id: 23,
         title: "John Stark & the Donner Party",
         coverImage: "../../Art-Stuff/book_covers/John-stark.png",
         buyLink: "#",
         description: "Many people left for west in the season of 1846. John Stark, who was about 29 and born in Wayne County, Indiana, was one of them. He was not one of our direct ancestors, but was the brother of Andrew Jackson who was. Andrew did not come to California until 1861.",
+        previewPages: [
+            "../../Art-Stuff/book-pages/JSATDP/JSATDP-page1.png",
+            "../../Art-Stuff/book-pages/JSATDP/JSATDP-page2.png",
+            "../../Art-Stuff/book-pages/JSATDP/JSATDP-page3.png"
+        ],
     },
      {
         id: 24,
@@ -243,6 +273,11 @@ const library = [
         coverImage: "../../Art-Stuff/book_covers/California.png",
         buyLink: "#",
         description: "This book is about Dorothy and my ancestors and is written to our children. This is about how they came to California. I have searched census records, talked with older people who knew the people involved, and studied diary's and other people's work on the era. My purpose is to get our children to understand the lives and journeys of thier ancestors, and try to inspire some of them to write more about these people to complete and expand this work, or rewrite it. I would like you to feel what it was like to cross the country with your ancestors. ",
+        previewPages: [
+            "../../Art-Stuff/book-pages/CHIC/CHIC-page1.png",
+            "../../Art-Stuff/book-pages/CHIC/CHIC-page2.png",
+            "../../Art-Stuff/book-pages/CHIC/CHIC-page3.png"
+        ],
     },
      {
         id: 25,
