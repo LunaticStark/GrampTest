@@ -66,8 +66,9 @@ const familyMembers  = [
 
 function test(item) {
     const testH1 = document.getElementById('testH1');
+    const logo = document.getElementById('logo');
     testH1.innerText = item.name;
-    
+    logo.innerText = item.name;
 }
 const urlParams = new URLSearchParams(window.location.search);
 const familyIndex = urlParams.get('Person')

@@ -2,6 +2,7 @@ body {
     background-color: #ddd7cc;
     margin: 0;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .main-header {
@@ -73,7 +74,7 @@ body {
 #note {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 1rem;
+    font-size: 3dvw;
     color: #1a1a1a;
     font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
