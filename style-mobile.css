@@ -95,7 +95,7 @@ body {
 }
 #spotlight-info {
    width: 90%;
-   height: 50%;
+   height: 60%;
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -134,7 +134,7 @@ body {
 }
 #spotlight-chooser {
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #1a1a1a;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
@@ -187,7 +187,120 @@ body {
     border-radius: 8px;
 }
 
+
+#aboutAuthor {
+    height: max-content;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#family-photo {
+    background-image: url(Art-Stuff/full-family.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 40dvh;
+    max-height: 60dvh;
+    width: 100%;
+    position: relative;
+    filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.9));
+}
+.family-button {
+    max-width: 60px;
+    max-height: 60px;
+    
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+#Allison {
+    left: 16%;
+    top: 19%;
+    height: 60px;
+    width: 25px;
+}
+#Ammon {
+    left: 27%;
+    top: 16%;
+    height: 45px;
+    width: 30px;
+}
+#Ben {
+    left: 48%;
+    top: 18%;
+    height: 60px;
+    width: 35px;
+}
+#Theresa {
+    left: 67%;
+    top: 16%;
+    width: 35px;
+    height: 60px;
+}
+#Stanley {
+    left: 85%;
+    top: 30%;
+    height: 60px;
+    width: 30px;
+}
+#Rob {
+    left: 25%;
+    top: 50%;
+    height: 40px;
+    width: 30px;
+}
+#Gooby {
+    left: 36%;
+    top: 50%;
+    height: 40px;
+    width: 30px;
+}
+#Tommy {
+    left: 46%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+}
+#Kyle {
+    left: 57%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+}
+#Susy {
+    left: 85%;
+    top: 55%;
+    width: 40px;
+    height: 60px;
+}
+#Rebekah {
+    left: 28%;
+    top: 70%;
+    width: 40px;
+    height: 60px;
+}
+#Dorothy {
+    left: 43%;
+    top: 70%;
+    width: 40px;
+    height: 60px;
+}
+#Jeanette {
+    left: 61%;
+    top: 70%;
+    width: 40px;
+    height: 60px;
+}
+#Cindy {
+    left: 75%;
+    top: 84%;
+    width: 50px;
+    height: 60px;
+}
+
+
+
 #media {
+    display: none;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     height: 339px;

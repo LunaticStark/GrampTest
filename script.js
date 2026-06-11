@@ -18,3 +18,12 @@ playbutton2.addEventListener('click', () => {
 playbutton3.addEventListener('click', () => {
      window.open("https://www.youtube.com/watch?v=oNmoAIs4Y7E", "_blank");
 });
+
+const familyButtons = document.querySelectorAll('.family-button');
+
+familyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const personId = button.getAttribute('data-person');
+        window.location.href = `Pages/about-Author/index.html?Person=${personId}`;
+    })
+})
