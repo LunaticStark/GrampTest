@@ -11,7 +11,7 @@ const familyMembers  = [
     },
     {
         name: "Ammon & Jeanelle Stark",
-        familyphoto: "../../Art-stuff/family-photos/Ammon&jeanelleStark.png",
+        familyphoto: "../../Art-Stuff/family-photos/Ammon&jeanelleStark.png",
         photobuttons: [
             {
                 name: "Stonewall",
@@ -111,7 +111,7 @@ const familyMembers  = [
     },
     {
         name: "Cindy",
-        familyphoto: "../../Art-stuff/family-photos/Cindy.png",
+        familyphoto: "../../Art-Stuff/family-photos/Cindy.png",
     },
 ];
 const navhistory = [];
