@@ -7,60 +7,50 @@ menuToggle.addEventListener('click', () => {
 
 const familyMembers  = [
     {
-        id: 1,
         name: "Allison",
     },
     {
-        id: 2,
         name: "Ammon & Jeanelle Stark",
-        familyphoto: "../../Art-stuff/family-photos/image000000.JPG",
+        familyphoto: "../../Art-stuff/family-photos/Ammon&jeanelleStark.png",
+        descriprion: "",
+        children: ["Stonewall, Truck, Hyrim, Shepherd"],
+        parents1: ["Stanley Stark, Dorothy Stark"],
+        parents2: ["Mark Hannon, Robin Hannon"],
     },
     {
-        id: 3,
         name: "Ben",
     },
     {
-        id: 4,
         name: "Theresa",
     },
     {
-        id: 5,
         name: "Stanley",
     },
     {
-        id: 6,
         name: "Rob",
     },
     {
-        id: 7,
-        name: "Gooby",
+        name: "Stan (Gooby)",
     },
     {
-        id: 8,
         name: "Tommy",
     },
     {
-        id: 9,
         name: "Kyle",
     },
     {
-        id: 10,
-        name: "Susy",
+        name: "Suzy",
     },
     {
-        id: 11,
         name: "Rebekah",
     },
     {
-        id: 12,
         name: "Dorothy",
     },
     {
-        id: 13,
         name: "Jeanette",
     },
     {
-        id: 14,
         name: "Cindy",
         familyphoto: "../../Art-stuff/family-photos/Cindy.png",
     },
@@ -69,18 +59,24 @@ const familyMembers  = [
 function test(item) {
     const testH1 = document.getElementById('testH1');
     const logo = document.getElementById('logo');
-    const image = document.getElementById('testImg')
+    const image = document.getElementById('testImg');
+    const description = document.getElementById('description')
+    const childrenList = document.getElementById('children')
+    const parentsList1 = document.getElementById('parent1')
+    const parentsList2 = document.getElementById('parent2')
     testH1.innerText = item.name;
     logo.innerText = item.name;
     image.src = item.familyphoto;
+
 }
 const urlParams = new URLSearchParams(window.location.search);
 const familyIndex = urlParams.get('Person')
 
 if (familyIndex !== null) {
-    const index = parseInt(familyIndex, 10);
-    if (index >= 0 && index <= familyMembers.length) {
-        const selectedFamliyMember = familyMembers[index];
-        test(selectedFamliyMember)
+    const selectedFamilymember = familyMembers.find(member => member.name === familyIndex);
+    if (selectedFamilymember) {
+        test(selectedFamilymember)
+    } else {
+        console.log("Family Member not found with name:", familyIndex);
     }
 }

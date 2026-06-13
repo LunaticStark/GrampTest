@@ -23,7 +23,8 @@ const familyButtons = document.querySelectorAll('.family-button');
 
 familyButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const personId = button.getAttribute('data-person');
-        window.location.href = `Pages/about-Author/index.html?Person=${personId}`;
+        const personId = button.id;
+        const encodedId = encodeURIComponent(personId);
+        window.location.href = `Pages/family-page/index.html?Person=${encodedId}`;
     })
 })

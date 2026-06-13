@@ -61,3 +61,23 @@ body {
     font-family: 'Baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
+
+#displayZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#testH1 {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+#testImg {
+    max-width: 90%;
+    max-height: 40dvh;
+    box-shadow: 5px 5px 10px #1a1a1a;
+}
