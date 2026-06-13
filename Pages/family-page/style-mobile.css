@@ -76,8 +76,32 @@ body {
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-#testImg {
-    max-width: 90%;
-    max-height: 40dvh;
+#Imgcontainer {
+    position: relative;
+    width: 100%;
+}
+#displayImg {
+    width: 100%;
     box-shadow: 5px 5px 10px #1a1a1a;
+}
+#close-button {
+    margin-top: 20px;
+    background-color: #6b1d2f;
+    color: #ddd7cc;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+.family-button {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
