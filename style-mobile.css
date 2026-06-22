@@ -195,7 +195,7 @@ body {
 }
 #family-photo {
     background-image: url(Art-Stuff/full-family.png);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 45dvh;
