@@ -9,9 +9,22 @@ const navhistory = [];
 const familyMembers  = [
     {
         name: "Allison",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Allison's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
         name: "Ammon & Jeanelle Stark",
+        altNames: ["Ammon Stark", "Jeanelle Stark", "Ammon",],
         familyphoto: "../../Art-Stuff/family-photos/Ammon&jeanelleStark.png",
         photobuttons: [
             {
@@ -62,14 +75,13 @@ const familyMembers  = [
         parents: [
             {
                 person: "Ammon's",
-                father: 'Stanley',
-                mother: 'Dorothy',
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
             },
             {
                 person: "Jeanelle's",
                 father: 'Mark Hannon',
                 mother: 'Robin Hannon',
-                link: 'Mark & Robin Hannon'
             }
         ],
     },
@@ -81,7 +93,6 @@ const familyMembers  = [
             {
                 father: "Ammon Stark",
                 mother: "Jeanelle Stark",
-                link: "Ammon & Jeanelle Stark"
             }
         ],
     },
@@ -93,7 +104,6 @@ const familyMembers  = [
             {
                 father: "Ammon Stark",
                 mother: "Jeanelle Stark",
-                link: "Ammon & Jeanelle Stark"
             }
         ],
     },
@@ -105,7 +115,6 @@ const familyMembers  = [
             {
                 father: "Ammon Stark",
                 mother: "Jeanelle Stark",
-                link: "Ammon & Jeanelle Stark"
             }
         ],
     },
@@ -117,53 +126,486 @@ const familyMembers  = [
             {
                 father: "Ammon Stark",
                 mother: "Jeanelle Stark",
-                link: "Ammon & Jeanelle Stark"
             }
         ],
     },
     {
-        name: "Mark & Robin Hannon"
+        name: "Mark & Robin Hannon",
+        altNames: ["Mark Hannon", "Robin Hannon",],
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Mark's",
+                father: '',
+                mother: '',
+            },
+             {
+                person: "Robin's",
+                father: '',
+                mother: '',
+            },
+        ],
     },
     {
         name: "Ben",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Ben's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
         name: "Theresa",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Theresa's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
-        name: "Stanley",
+        name: "Stanley & Dorothy Stark",
+        altNames: ["Stanley Stark", "Dorothy Stark", "Dorothy",],
+        familyphoto: "",
+        photobuttons: [
+           
+        ],
+        descriprion: "description needed",
+        children: ["Allison", "Ammon", "Ben", "Cindy", "Jeanette", "Kyle", "Rebekah", "Rob", "Stan (Gooby)", "Suzy", "Theresa", "Tommy"],
+        parents: [
+            {
+                person: "Stanley's",
+                father: 'Thomas Stark',
+                mother: 'Eunice Stark',
+            },
+            {
+                person: "Dorothy's",
+                father: 'Lawrence Shoemaker',
+                mother: 'Elizabeth Shoemaker',
+            }
+        ],
     },
     {
-        name: "Rob",
+        name: "Tom & Eunice Stark",
+        altNames: ["Thomas Stark", "Eunice Stark",],
+        familyphoto: "../../Art-Stuff/family-photos/Tom-Eunice.png",
+        photobuttons: [
+        ],
+        descriprion: "description needed",
+        children: ["Jacque", "Pat", "Stanley Stark"],
+        parents: [
+            {
+                person: "Thomas's",
+                father: 'George Stark',
+                mother: 'Alta Hastain',
+            },
+            {
+                person: "Eunice's",
+                father: 'Howard Moody',
+                mother: 'Ella Moody',
+            }
+        ],
+    },
+    {
+        name: "Larry & Elizabeth Shoemaker",
+        altNames: ["Lawrence Shoemaker", "Elizabeth Shoemaker",],
+        familyphoto: "../../Art-Stuff/family-photos/Larry&Elizabeth.png",
+        photobuttons: [
+        ],
+        descriprion: "description needed",
+        children: ["Frances", "Edna", "Dorothy", "Betty"],
+        parents: [
+            {
+                person: "Larry's",
+                father: 'Fred Shoemaker',
+                mother: 'Margaret Shoemaker',
+            },
+            {
+                person: "Elizabeth's",
+                father: 'Francis Davis',
+                mother: 'Winifred Davis',
+            }
+        ],
+    },
+    {
+        name: "Rob & Stacie Stark",
+        altNames: ["Rob", "Rob Stark", "Stacie Stark"],
+        familyphoto: "../../Art-Stuff/family-photos/Rob.png",
+        photobuttons: [  
+             {
+                name: "Amanda Stark",
+                top: "45%",
+                left: "33%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Jessica Stark",
+                top: "45%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        children: ["Amanda Stark", "Jessica Stark"],
+        parents: [
+            {
+                person: "Rob's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+            {
+                person: "Stacie's",
+                father: '',
+                mother: '',
+            },
+        ],
+    },
+    {
+        name: "Amanda Stark",
+        familyphoto: "../../Art-Stuff/family-photos/Rob.png",
+        photobuttons: [  
+            {
+                name: "Stacie Stark",
+                top: "20%",
+                left: "35%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Rob Stark",
+                top: "20%",
+                left: "70%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Jessica Stark",
+                top: "45%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                father: 'Rob Stark',
+                mother: 'Stacie Stark',
+            },
+        ],
+    },
+    {
+        name: "Jessica Stark",
+        familyphoto: "../../Art-Stuff/family-photos/Rob.png",
+        photobuttons: [  
+            {
+                name: "Stacie Stark",
+                top: "20%",
+                left: "35%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Rob Stark",
+                top: "20%",
+                left: "70%",
+                width: "60px",
+                height: "60px",
+            },
+             {
+                name: "Amanda Stark",
+                top: "45%",
+                left: "33%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                father: 'Rob Stark',
+                mother: 'Stacie Stark',
+            },
+        ],
     },
     {
         name: "Stan (Gooby)",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Stan's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
         name: "Tommy",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Tommy's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
         name: "Kyle",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Kyle's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
-        name: "Suzy",
+        name: "Suzy & Chris Dunham",
+        altNames: ["Suzy", "Chris Dunham",],
+        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        photobuttons: [  
+            {
+                name: "Krystal",
+                top: "25%",
+                left: "24%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Whitney",
+                top: "22%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Jared",
+                top: "68%",
+                left: "63%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        children: ["Krystal", "Whitney", "Jared"],
+        parents: [
+            {
+                person: "Suzy's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+            {
+                person: "Chris's",
+                father: "",
+                mother: "",
+            },
+        ],
+    },
+    {
+        name: "Krystal",
+        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        photobuttons: [  
+            {
+                name: "Suzy",
+                top: "52%",
+                left: "52%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Chris Dunham",
+                top: "46%",
+                left: "22%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Whitney",
+                top: "22%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Jared",
+                top: "68%",
+                left: "63%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        parents: [
+            {
+                father: 'Chris Dunham',
+                mother: 'Suzy',
+            },
+        ],
+    },
+    {
+        name: "Whitney",
+        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        photobuttons: [  
+            {
+                name: "Suzy",
+                top: "52%",
+                left: "52%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Chris Dunham",
+                top: "46%",
+                left: "22%",
+                width: "60px",
+                height: "60px",
+            },
+             {
+                name: "Krystal",
+                top: "25%",
+                left: "24%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Jared",
+                top: "68%",
+                left: "63%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        parents: [
+            {
+                father: 'Chris Dunham',
+                mother: 'Suzy',
+            },
+        ],
+    },
+    {
+        name: "Jared",
+        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        photobuttons: [  
+            {
+                name: "Suzy",
+                top: "52%",
+                left: "52%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Chris Dunham",
+                top: "46%",
+                left: "22%",
+                width: "60px",
+                height: "60px",
+            },
+             {
+                name: "Krystal",
+                top: "25%",
+                left: "24%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Whitney",
+                top: "22%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        parents: [
+            {
+                father: 'Chris Dunham',
+                mother: 'Suzy',
+            },
+        ],
     },
     {
         name: "Rebekah",
-    },
-    {
-        name: "Dorothy",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Rebekah's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
         name: "Jeanette",
+        familyphoto: "",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        children: [],
+        parents: [
+            {
+                person: "Jeanette's",
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
     {
         name: "Cindy",
         familyphoto: "../../Art-Stuff/family-photos/Cindy.png",
+        photobuttons: [  
+        ],
+        descriprion: "description needed",
+        parents: [
+            {
+                father: 'Stanley Stark',
+                mother: 'Dorothy Stark',
+            },
+        ],
     },
 ];
 
 function test(item) {
+    window.scrollTo(0, 0);
     const testH1 = document.getElementById('testH1');
     const logo = document.getElementById('logo');
     const image = document.getElementById('displayImg');
@@ -195,7 +637,7 @@ function test(item) {
         itemelement.style.width = button.width;
         itemelement.style.height = button.height;
         itemelement.addEventListener('click', () => {
-            let selectedFamilymember = familyMembers.find(member => member.name === button.name)
+            let selectedFamilymember = familyMembers.find(member => member.name === button.name  || (member.altNames && member.altNames.includes(button.name)))
             if (selectedFamilymember) {
                 navhistory.push(item)
                  test(selectedFamilymember)
@@ -215,7 +657,7 @@ function test(item) {
             listchildren.innerText = `${child}`;
             childrenList.appendChild(listchildren);
             listchildren.addEventListener('click', () => {
-                 let selectedFamilymember = familyMembers.find(member => member.name === child)
+                 let selectedFamilymember = familyMembers.find(member => member.name === child || (member.altNames && member.altNames.includes(child)))
             if (selectedFamilymember) {
                 navhistory.push(item)
                  test(selectedFamilymember)
@@ -244,34 +686,20 @@ function test(item) {
             personsmother.innerText = object.mother;
 
             personsfather.addEventListener('click', () => {
-                if (object.link) {
-                    let selectedFamilymember = familyMembers.find(member => member.name === object.link);
+                    let selectedFamilymember = familyMembers.find(member => member.name === object.father  || (member.altNames && member.altNames.includes(object.father)));
                     if (selectedFamilymember) {
                     navhistory.push(item)
                     test(selectedFamilymember)
-                  };
-                } else {
-                    let selectedFamilymember = familyMembers.find(member => member.name === object.father);
-                    if (selectedFamilymember) {
-                    navhistory.push(item)
-                    test(selectedFamilymember)
-                  };
-                };   
+                  };  
             });
             personsmother.addEventListener('click', () => {
-                if (object.link) {
-                    let selectedFamilymember = familyMembers.find(member => member.name === object.link);
+               
+                    let selectedFamilymember = familyMembers.find(member => member.name === object.mother || (member.altNames && member.altNames.includes(object.mother)));
                     if (selectedFamilymember) {
                     navhistory.push(item)
                     test(selectedFamilymember)
                   };
-                } else {
-                    let selectedFamilymember = familyMembers.find(member => member.name === object.mother);
-                    if (selectedFamilymember) {
-                    navhistory.push(item)
-                    test(selectedFamilymember)
-                  };
-                };   
+             
             });
 
 
@@ -293,7 +721,7 @@ function test(item) {
 const urlParams = new URLSearchParams(window.location.search);
 const familyIndex = urlParams.get('Person')
 if (familyIndex !== null) {
-    let selectedFamilymember = familyMembers.find(member => member.name === familyIndex);
+    let selectedFamilymember = familyMembers.find(member => member.name === familyIndex || (member.altNames && member.altNames.includes(familyIndex)));
     if (selectedFamilymember) {
         test(selectedFamilymember)
     } else {

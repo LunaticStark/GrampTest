@@ -80,9 +80,14 @@ body {
 #Imgcontainer {
     position: relative;
     width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #displayImg {
-    width: 100%;
+    max-width: 100%;
+    max-height: 50dvh;
     box-shadow: 5px 5px 10px #1a1a1a;
 }
 .family-button {
@@ -183,7 +188,7 @@ body {
 .listedParent {
     color: #1a1a1a;
     text-decoration: none;
-    font-size: 6dvw;
+    font-size: 5dvw;
     font-weight: 500;
     font-family: 'Baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);   
