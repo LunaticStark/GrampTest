@@ -397,7 +397,7 @@ const familyMembers  = [
     {
         name: "Suzy & Chris Dunham",
         altNames: ["Suzy", "Chris Dunham",],
-        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        familyphoto: "../../Art-Stuff/family-photos/Suzy.png",
         photobuttons: [  
             {
                 name: "Krystal",
