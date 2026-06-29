@@ -193,6 +193,14 @@ body {
     padding-bottom: 20px;
     padding-top: 20px;
 }
+#aboutAuthor h2 {
+    text-align: center;
+    font-size: 7dvw;
+    color: #1a1a1a;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
 #family-photo {
     background-image: url(Art-Stuff/full-family.png);
     background-size: cover;
@@ -210,6 +218,19 @@ body {
     border-radius: 15px;
     position: absolute;
     transform: translate(-50%, -50%);
+    text-align: center;
+    user-select: none;
+    font-size: 2dvw;
+    font-weight: 900;
+    color: #1a1a1a;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.family-button:hover {
+    opacity: 1;
 }
 #Allison {
     left: 16%;
