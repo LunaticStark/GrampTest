@@ -151,17 +151,105 @@ const familyMembers  = [
         ],
     },
     {
-        name: "Ben",
-        familyphoto: "",
+        name: "Ben & Terra Stark",
+        altNames: ["Ben", "Ben Stark", "Terra Stark"],
+        familyphoto: "../../Art-Stuff/family-photos/Ben.png",
         photobuttons: [  
+            {
+                name: "Covey Stark",
+                top: "50%",
+                left: "50%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Sam Stark",
+                top: "64%",
+                left: "72%",
+                width: "60px",
+                height: "60px",
+            },
         ],
         descriprion: "description needed",
-        children: [],
+        children: ["Covey Stark", "Sam Stark"],
         parents: [
             {
                 person: "Ben's",
                 father: 'Stanley Stark',
                 mother: 'Dorothy Stark',
+            },
+             {
+                person: "Terra's",
+                father: '',
+                mother: '',
+            },
+        ],
+    },
+    {
+        name: "Covey Stark",
+        familyphoto: "../../Art-Stuff/family-photos/Ben.png",
+        photobuttons: [  
+            {
+                name: "Sam Stark",
+                top: "64%",
+                left: "72%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Ben Stark",
+                top: "30%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Terra Stark",
+                top: "20%",
+                left: "43%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        parents: [
+            {
+                father: 'Ben Stark',
+                mother: 'Terra Stark',
+            },
+        ],
+    },
+    {
+        name: "Sam Stark",
+        familyphoto: "../../Art-Stuff/family-photos/Ben.png",
+        photobuttons: [  
+            {
+                name: "Covey Stark",
+                top: "50%",
+                left: "50%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Ben Stark",
+                top: "30%",
+                left: "60%",
+                width: "60px",
+                height: "60px",
+            },
+            {
+                name: "Terra Stark",
+                top: "20%",
+                left: "43%",
+                width: "60px",
+                height: "60px",
+            },
+        ],
+        descriprion: "description needed",
+        parents: [
+            {
+                father: 'Ben Stark',
+                mother: 'Terra Stark',
             },
         ],
     },
@@ -479,7 +567,7 @@ const familyMembers  = [
     },
     {
         name: "Whitney",
-        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        familyphoto: "../../Art-Stuff/family-photos/Suzy.png",
         photobuttons: [  
             {
                 name: "Suzy",
@@ -520,7 +608,7 @@ const familyMembers  = [
     },
     {
         name: "Jared",
-        familyphoto: "../../Art-stuff/family-photos/Suzy.png",
+        familyphoto: "../../Art-Stuff/family-photos/Suzy.png",
         photobuttons: [  
             {
                 name: "Suzy",
