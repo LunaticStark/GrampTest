@@ -1,26 +1,20 @@
+const header = document.querySelector('.main-header');
+const mainContent = document.querySelector('.main-content');
+function adjustContentPosition() {
+    const headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+}
+window.addEventListener('load', adjustContentPosition);
+window.addEventListener('resize', adjustContentPosition);
+
+
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
-
 menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
 
-const playbutton1 = document.getElementById('playbutt1');
-const playbutton2 = document.getElementById('playbutt2');
-const playbutton3 = document.getElementById('playbutt3');
-
-playbutton1.addEventListener('click', () => {
-    window.open("https://www.youtube.com/watch?v=V2FXntcrMtY&t", "_blank")
-});
-playbutton2.addEventListener('click', () => {
-     window.open("https://www.youtube.com/watch?v=LsYW3fB81D8&t", "_blank");
-});
-playbutton3.addEventListener('click', () => {
-     window.open("https://www.youtube.com/watch?v=oNmoAIs4Y7E", "_blank");
-});
-
 const familyButtons = document.querySelectorAll('.family-button');
-
 familyButtons.forEach(button => {
     button.addEventListener('click', () => {
         const personId = button.id;
@@ -28,3 +22,29 @@ familyButtons.forEach(button => {
         window.location.href = `Pages/family-page/index.html?Person=${encodedId}`;
     })
 })
+
+document.querySelectorAll('.content-box').forEach(box => {
+    const button = box.querySelector('.expandtion-button');
+    button.addEventListener('click', () => {
+        const content = box.querySelector('.expandtion-content');
+        content.classList.toggle('expanded');
+
+        if (content.classList.contains('expanded')) {
+            button.innerHTML = '&#11165';
+        } else {
+            button.innerHTML = '&#11167';
+        }
+
+        if (content.classList.contains('expanded')) {
+            setTimeout(() => {
+                box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 200);
+        }
+
+        document.querySelectorAll('.expandtion-content').forEach(otherContent => {
+            if (otherContent !== content) {
+                otherContent.classList.remove('expanded');
+            }
+        });
+    });
+});
