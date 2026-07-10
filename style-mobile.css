@@ -2,6 +2,7 @@ body {
     background-color: #ddd7cc;
     margin: 0;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .main-header {
@@ -63,152 +64,27 @@ body {
 }
 
 .main-content {
-    padding-top: 20px;
-    background-color: #ddd7cc;
-}
-.layout-block {
+    top: calc(var(--header-height));
+    display: flex;
+    flex-direction: column;
+    position: relative;
     width: 100%;
-    height: 80vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
 }
-#spotlight-com {
-   display: none;
-}
-
-#spotlight-content {
-    width: 100%;
-    height: 90%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#spotlight-title {
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    color: #1a1a1a;
-}
-#spotlight-info {
-   width: 90%;
-   height: 60%;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
-}
-#spotlight-image {
-    max-width: 60%;
-    max-height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.7);
-}
-#spotlight-description {
-    width: 40%;
-    height: 90%;
-    font-size: 4dvw;
-    color: #1a1a1a;
-    text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-    font-family: 'Baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
-}
-#spotlight-link {
-    margin-top: 20px;
-    color: #ddd7cc;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-decoration: none;
-    background-color: #6b1d2f;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
-}
-#spotlight-chooser {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #1a1a1a;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
-}
-
-#bookshelf {
-    background-image: url('Art-Stuff/bookshelf.png');
-    background-size: cover;
-    background-position: center;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.9);
-}
-#bookshelf-row {
-    height: 100%;
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-.book-container {
-    width: 70vw;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-.book-cover {
-    max-width: 90%;
-    max-height: 70%;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.9);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bookshelf-link {
-    text-align: center;
-    color: #ddd7cc;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
-    text-decoration: none;
-    background-color: #6b1d2fd3;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
 
 #familyPhoto {
     height: max-content;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-#aboutAuthor h2 {
-    text-align: center;
-    font-size: 7dvw;
-    color: #1a1a1a;
-    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    white-space: nowrap;
 }
 #family-photo {
     background-image: url(Art-Stuff/full-family.png);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 45dvh;
     max-height: 60dvh;
-    width: 100%;
+    
     position: relative;
     filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.9));
 }
@@ -218,19 +94,7 @@ body {
     border-radius: 15px;
     position: absolute;
     transform: translate(-50%, -50%);
-    text-align: center;
-    user-select: none;
-    font-size: 2dvw;
-    font-weight: 900;
-    color: #1a1a1a;
-    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
-    white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-.family-button:hover {
-    opacity: 1;
 }
 #Allison {
     left: 16%;
@@ -318,69 +182,243 @@ body {
 }
 
 
-
-#media {
-    display: none;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    height: 339px;
+#everythingElse {
+   height: max-content;
+   width: 100%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
-.filmstrip {
-    width: 1405px;
-    height: 100%;
+#content-container {
+    height: max-content;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 10px;
+}
+#content-Title {
+    font-size: 12dvw;
+    font-weight: 900;
+    color: #1a1a1a;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+}
+#content-Description {
+    font-size: 5dvw;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+}
+.content-box {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    background-color: #6b1d2f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.expandtion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #ddd7cc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+}
+.expandtion-button {
+    font-size: 7dvw;
+    font-weight: bold;
+    color: #ddd7cc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    user-select: none;
+}
+.expandtion-content {
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+}
+.expandtion-content.expanded {
+    max-height: 1000px;
+}
+.expandtion-inner {
+    padding: 0 15px 15px 15px;
+}
+
+#stanley-books-section {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+#spotlight {
+    width: 95%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd7cc;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    color: #1a1a1a;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+#spotlight h4 {
+    margin-top: 5px;
+    font-family: 'Baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    font-weight: 600;
+}
+#spotlight-title {
+    font-size: 7dvw;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+}
+#spotlight-contents {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    position: relative;
+    column-gap: 10px;
 }
-.filmstrip::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+#spotlight-image {
+    width: 45%;
+    height: 80%;
+    background-image: url(Art-Stuff/spotlight.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.9));
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+#spotlight-description {
+    width: 45%;
+    height: 80%;
+    font-size: 4dvw;
+    color: #1a1a1a;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    font-family: 'Baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+}
+#spotlight-page-link {
+    margin-top: 10px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
+}
+#spotlight-page-link:hover {
+    text-decoration: underline 0.1rem;
+    text-underline-offset: 0.2rem;
+}
+
+#bookshelf {
     width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
-    background-image: url(Art-Stuff/vecteezy_filmstrip_1195071.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-}
-.video-container {
-    width: 23%;
-    height: 55%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: max-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
-#video1 {
-    background-image: url("https://img.youtube.com/vi/V2FXntcrMtY/hqdefault.jpg");
+#bookshelf-contents {
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    background-image: url(Art-Stuff/bookshelf.png);
+    background-position: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
 }
-#video2 {
-    background-image: url("https://img.youtube.com/vi/LsYW3fB81D8/hqdefault.jpg");
+.book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 30%;
+    row-gap: 10px;
 }
-#video3 {
-    background-image: url("https://img.youtube.com/vi/oNmoAIs4Y7E/hqdefault.jpg");
+.books-cover {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
 }
-.playbutton {
-    height: 50px;
-    width: 50px;
-    background-color: #fff;
-    clip-path: polygon(0 0, 0 100%, 100% 50%);
-    z-index: 5;
-}
-#youtube-link {
-    color: #1a1a1a;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-decoration: none;
-    z-index: 5;
+.books-title {
+    text-align: center;
+    color: #ddd7cc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    background-color: #6b1d2fd3;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.books-title:hover {
+    text-decoration: underline;
+}
+#view-all-link {
+    margin-top: 12px;
+    color: #ddd7cc;
+    text-decoration: none;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
+}
+#view-all-link:hover {
+    text-decoration: underline 0.1rem;
+    text-underline-offset: 0.2rem;
+}
+
+
+#family-pages-note {
+    font-size: 4dvw;
+    font-weight: bold;
+    color: #98958e;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+}
+#family-pages-description {
+    font-size: 5dvw;
+    font-weight: bold;
+    color: #ddd7cc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
 }

@@ -1,5 +1,5 @@
 const header = document.querySelector('.main-header');
-const mainContent = document.querySelector('.main-content');
+
 function adjustContentPosition() {
     const headerHeight = header.offsetHeight;
     document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
@@ -44,6 +44,15 @@ document.querySelectorAll('.content-box').forEach(box => {
         document.querySelectorAll('.expandtion-content').forEach(otherContent => {
             if (otherContent !== content) {
                 otherContent.classList.remove('expanded');
+                
+                const otherBox = otherContent.closest('.content-box');
+
+                if (otherBox) {
+                    const otherButton = otherBox.querySelector('.expandtion-button');
+                    if (otherButton) {
+                        otherButton.innerHTML = '&#11167;';
+                    }
+                }
             }
         });
     });
