@@ -99,13 +99,15 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     text-align: center;
-    user-select: none;
-    font-size: 2dvw;
+    text-decoration: underline;
+    font-size: 1.8dvw;
     font-weight: 900;
     color: #1a1a1a;
     font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
     white-space: nowrap;
+    cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }

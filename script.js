@@ -19,7 +19,11 @@ familyButtons.forEach(button => {
     button.addEventListener('click', () => {
         const personId = button.id;
         const encodedId = encodeURIComponent(personId);
+        if (personId !== "Cindy") {
         window.location.href = `Pages/family-page/index.html?Person=${encodedId}`;
+        } else if (personId === "Cindy") {
+            window.location.href = `Pages/cindys-page/index.html`
+        }
     })
 })
 
@@ -30,9 +34,9 @@ document.querySelectorAll('.content-box').forEach(box => {
         content.classList.toggle('expanded');
 
         if (content.classList.contains('expanded')) {
-            button.innerHTML = '&#11165';
+            button.innerHTML = '&#11165;';
         } else {
-            button.innerHTML = '&#11167';
+            button.innerHTML = '&#11167;';
         }
 
         if (content.classList.contains('expanded')) {
