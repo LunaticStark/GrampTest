@@ -84,7 +84,7 @@ body {
     align-content: center;
     align-items: center;
     row-gap: 20px;
-    touch-action: pan-y;
+    touch-action: pan-x;
     overflow-x: hidden;
 }
 
