@@ -1,5 +1,4 @@
 const header = document.querySelector('.main-header');
-
 function adjustContentPosition() {
     const headerHeight = header.offsetHeight;
     document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
