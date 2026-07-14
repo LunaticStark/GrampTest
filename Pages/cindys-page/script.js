@@ -54,6 +54,11 @@ function startTimer() {
 
 const track = document.getElementById(`circles-track`);
 const allCircles = document.querySelectorAll(`.circle`);
+allCircles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        goToImage(index);
+    });
+});
 const STEP_SIZE = 50;
 function updateCircles(currentIndex) {
     const targetX = -(currentIndex * STEP_SIZE);
