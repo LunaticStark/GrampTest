@@ -172,6 +172,17 @@ body {
     text-align: center;
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
 }
+#text-area a {
+    color: #6b1d2f;
+    text-shadow: 0 0 8px #9d324b;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#text-area a:hover {
+    text-decoration: underline;
+    transform: scale(1.08) translateY(-2px);
+}
 #text-area {
     font-size: 4dvw;
     font-weight: 500;
