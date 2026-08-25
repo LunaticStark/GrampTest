@@ -1,0 +1,20 @@
+{
+    "name": "Stanley's Stories",
+    "short_name": "Stanley's Stories",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ddd7cc",
+    "theme_color": "#6b1d2f",
+    "icons": [
+        {
+            "src": "Art-Stuff/full-family.png",
+            "sizes": "192x192",
+            "type": "image/png" 
+        },
+        {
+            "src": "Art-Stuff/full-family.png",
+            "sizes": "512x512",
+            "type": "image/png" 
+        }
+    ]
+}

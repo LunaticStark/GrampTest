@@ -349,7 +349,7 @@ body {
 #spotlight-image {
     width: 45%;
     height: 80%;
-    background-image: url(Art-Stuff/spotlight.png);
+    
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
