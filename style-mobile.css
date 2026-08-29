@@ -453,9 +453,9 @@ body {
 #installPromtContainer {
     position: absolute;
     width: 100dvw;
-    top: var(--header-height);
+    top: 0;
     left: 0;
-    height: calc(100dvh - var(--header-height));
+    height: 100dvh;
     background-color: #1a1a1aa8;
 
     display: none;
