@@ -123,6 +123,10 @@ body {
 .family-button .active-name {
     opacity: 1;
 }
+.family-button .promptHide {
+    user-select: none;
+    opacity: 0;
+}
 #Allison {
     left: 9%;
     top: 19%;
