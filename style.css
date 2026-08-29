@@ -60,7 +60,7 @@ body {
 .main-content {
     width: 1200px;
     top: calc( 50dvh + var(--header-height) / 2);
-    height: calc(100vh - var(--header-height) - 5dvh);
+    height: calc(100dvh - var(--header-height) - 5dvh);
     transform: translateY(-50%);
     position: relative;
     margin-left: auto;
@@ -79,18 +79,18 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
 }
 #family-photo {
-    background-image: url(Art-Stuff/full-family.png);
+    background-image: url(Art-Stuff/512familyphoto.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    
+    aspect-ratio: 1 / 1;
     height: 100%;
-    width: 95%;
+    
     position: relative;
-    filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.9));
+    box-shadow: 4px 4px 7px #1a1a1a;
+    border-radius: 15px;
 }
 .family-button {
     max-width: 60px;
@@ -98,72 +98,80 @@ body {
     border-radius: 15px;
     position: absolute;
     transform: translate(-50%, -50%);
-    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 5;
+
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 
+       -1px -1px 0 #ddd7cc,
+        1px -1px 0 #ddd7cc,
+       -1px  1px 0 #ddd7cc,
+        1px  1px 0 #ddd7cc,
+        0px  2px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
     text-decoration: underline;
     font-size: 1.8dvw;
     font-weight: 900;
-    color: #1a1a1a;
-    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
-    text-decoration: underline;
-    white-space: nowrap;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
 .family-button:hover {
     opacity: 1;
 }
 #Allison {
-    left: 17%;
-    top: 19%;
+    left: 8%;
+    top: 16%;
     height: 60px;
-    width: 50px;
+    width: 25px;
 }
 [id="Ammon Stark"] {
-    left: 25%;
-    top: 15%;
+    left: 17%;
+    top: 12%;
     height: 60px;
-    width: 50px;
+    width: 40px;
 }
 #Ben {
-    left: 49%;
-    top: 13%;
+    left: 44%;
+    top: 9%;
     height: 60px;
-    width: 60px;
+    width: 45px;
 }
 #Theresa {
-    left: 67%;
-    top: 13%;
-    width: 60px;
+    left: 64%;
+    top: 10%;
+    width: 45px;
     height: 60px;
 }
 [id="Stanley Stark"] {
     left: 87%;
-    top: 23%;
+    top: 19%;
     height: 60px;
-    width: 60px;
+    width: 45px;
 }
 #Rob {
-    left: 25%;
+    left: 16%;
     top: 47%;
     height: 60px;
     width: 60px;
 }
 [id="Stan (Gooby)"] {
-    left: 37%;
-    top: 48%;
+    left: 30%;
+    top: 47%;
     height: 60px;
     width: 60px;
 }
 #Tommy {
-    left: 46.5%;
+    left: 41%;
     top: 48%;
     width: 60px;
     height: 60px;
 }
 #Kyle {
-    left: 55%;
+    left: 52%;
     top: 48%;
     width: 60px;
     height: 60px;
@@ -175,26 +183,26 @@ body {
     height: 60px;
 }
 #Rebekah {
-    left: 28%;
-    top: 60%;
+    left: 18.5%;
+    top: 62%;
     width: 60px;
     height: 60px;
 }
 [id="Dorothy Stark"] {
-    left: 43.5%;
-    top: 64%;
+    left: 37%;
+    top: 65%;
     width: 60px;
     height: 60px;
 }
 #Jeanette {
-    left: 63%;
-    top: 60%;
+    left: 58%;
+    top: 62%;
     width: 60px;
     height: 60px;
 }
 #Cindy {
-    left: 75%;
-    top: 77%;
+    left: 73%;
+    top: 78%;
     width: 60px;
     height: 60px;
 }
@@ -483,3 +491,301 @@ body {
     font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
 }
 
+#installPromtContainer {
+    position: absolute;
+    width: 100dvw;
+    top: var(--header-height);
+    height: calc(100dvh - var(--header-height));
+    background-color: #1a1a1aa8;
+    z-index: 10;
+    display: none;
+    user-select: none;
+}
+
+#ios-installPromt {
+    display: none;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background-color: #ddd7cc;
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 10px #1a1a1abe;
+}
+#installPromt {
+    display: none;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background-color: #ddd7cc;
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 10px #1a1a1abe;
+}
+
+.promtBanner {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #6b1d2f;
+}
+.promtCloseContainer {
+    position: absolute;
+    right: 1px;
+    display: inline;
+    cursor: pointer;
+}
+.promtCloseContainer img {
+    display: block;
+}
+.promtCloseContainer .promtCloseHover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.promtCloseContainer:hover .promtCloseHover {
+    opacity: 1;
+}
+.promtCloseContainer:hover .promtClose {
+    opacity: 0;
+}
+
+.promptContent {
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#iosPromtIconArea {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#iosPromtIconArea img {
+    
+    width: 240px;
+    height: 240px;
+    border-radius: 24px;
+}
+#iosPromtIconArea h2 {
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    font-size: 35px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#iosPromtIconArea p {
+    text-align: center;
+    width: 300px;
+    height: 110px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#IosPromtGuideArea {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#IosPromtGuideArea h2 {
+    margin: 0;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#IosPromtGuideArea ul {
+    margin-top: 5px;
+    padding: 0;
+    width: 250px;
+    height: 350px;
+    list-style-type: none;
+}
+#IosPromtGuideArea li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 250px;
+    border-bottom: double 4px #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#IosPromtGuideArea li:first-child {
+    border-top: double 4px #1a1a1a;
+}
+.iosImg-Menu {
+    height: 14px;
+    width: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: translateY(25%);
+}
+.iosImg-Share {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: translateY(25%);
+}
+
+
+#promptContentHeader {
+    grid-column: 1/-1;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+}
+#promptContentHeader h2 {
+    margin: 10px;
+    font-size: 40px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#promptContentHeader p {
+    margin: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#promptIconArea {
+    height: 230px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#promptIconArea img {
+    height: 190px;
+    width: 190px;
+    border-radius: 30px;
+}
+#promptBenifitsArea {
+    height: 230px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#promptBenifitsArea li {
+    margin: 15px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#installButtonArea {
+    grid-column: 1/-1;
+    height: 130px;
+    width: 600px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#installButton {
+    height: 65px;
+    width: 300px;
+    background-color: #6b1d2f;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #1a1a1a;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#installButton h1 {
+    
+    font-size: 35px;
+    font-weight: 1000;
+    color: #ddd7cc;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#installButton:hover {
+    color: #ddd7cc;
+    text-decoration: underline;
+    transform: scale(1.02) translateY(-2px);
+}
+#declineButton {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 200px;
+    background-color: #ddd7cc;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #1a1a1a;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+#declineButton h2 {
+    
+    font-size: 20px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#declineButton:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+    transform: scale(1.02) translateY(-2px);
+}

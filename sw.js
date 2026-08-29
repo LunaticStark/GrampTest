@@ -7,7 +7,9 @@ const ASSETS_TO_CACHE = [
     './style-mobile.css',
     './script.js',
     './manifest.json',
-    './Art-Stuff/full-family.png'
+    './Art-Stuff/full-family.png',
+    './Art-Stuff/192familyphoto.png',
+    './Art-Stuff/512familyphoto.png'
 ];
 
 self.addEventListener('install', (event) => {

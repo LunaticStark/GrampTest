@@ -7,12 +7,12 @@
     "theme_color": "#6b1d2f",
     "icons": [
         {
-            "src": "Art-Stuff/full-family.png",
+            "src": "Art-Stuff/192familyphoto.png",
             "sizes": "192x192",
             "type": "image/png" 
         },
         {
-            "src": "Art-Stuff/full-family.png",
+            "src": "Art-Stuff/512familyphoto.png",
             "sizes": "512x512",
             "type": "image/png" 
         }

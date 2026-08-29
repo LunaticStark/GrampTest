@@ -78,15 +78,17 @@ body {
     height: max-content;
 }
 #family-photo {
-    background-image: url(Art-Stuff/full-family.png);
-    background-size: contain;
+    background-image: url(Art-Stuff/512familyphoto.png);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 45dvh;
-    max-height: 60dvh;
+    aspect-ratio: 1 / 1;
+    width: 90dvw;
+    height: auto;
     
     position: relative;
-    filter: drop-shadow(0 7px 10px rgba(0, 0, 0, 0.9));
+    box-shadow: 4px 4px 7px #1a1a1a;
+    border-radius: 10px;
 }
 .family-button {
     max-width: 60px;
@@ -95,82 +97,107 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 5;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+    font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+    text-shadow: 
+       -1px -1px 0 #ddd7cc,
+        1px -1px 0 #ddd7cc,
+       -1px  1px 0 #ddd7cc,
+        1px  1px 0 #ddd7cc,
+        0px  2px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 6.5dvw;
+    font-weight: 900;
+}
+.family-button:hover {
+    opacity: 1;
+}
+.family-button .active-name {
+    opacity: 1;
 }
 #Allison {
-    left: 16%;
+    left: 9%;
     top: 19%;
     height: 60px;
     width: 25px;
 }
 [id="Ammon Stark"] {
-    left: 27%;
+    left: 19%;
     top: 16%;
-    height: 45px;
+    height: 60px;
     width: 30px;
 }
 #Ben {
-    left: 48%;
-    top: 18%;
+    left: 43%;
+    top: 15%;
     height: 60px;
     width: 35px;
 }
 #Theresa {
-    left: 67%;
-    top: 16%;
+    left: 65%;
+    top: 15%;
     width: 35px;
     height: 60px;
 }
 [id="Stanley Stark"] {
-    left: 85%;
-    top: 30%;
+    left: 87%;
+    top: 25%;
     height: 60px;
-    width: 30px;
+    width: 35px;
 }
 #Rob {
-    left: 25%;
-    top: 50%;
+    left: 17%;
+    top: 49%;
     height: 40px;
     width: 30px;
 }
 [id="Stan (Gooby)"] {
-    left: 36%;
-    top: 50%;
+    left: 28%;
+    top: 49%;
     height: 40px;
     width: 30px;
 }
 #Tommy {
-    left: 46%;
+    left: 41%;
     top: 50%;
     width: 40px;
     height: 40px;
 }
 #Kyle {
-    left: 57%;
+    left: 54%;
     top: 50%;
     width: 40px;
     height: 40px;
 }
 #Suzy {
-    left: 85%;
+    left: 87%;
     top: 55%;
     width: 40px;
     height: 60px;
 }
 #Rebekah {
-    left: 28%;
-    top: 70%;
+    left: 18%;
+    top: 68%;
     width: 40px;
     height: 60px;
 }
 [id="Dorothy Stark"] {
-    left: 43%;
+    left: 38%;
     top: 70%;
     width: 40px;
     height: 60px;
 }
 #Jeanette {
-    left: 61%;
-    top: 70%;
+    left: 58%;
+    top: 68%;
     width: 40px;
     height: 60px;
 }
@@ -205,6 +232,7 @@ body {
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 0;
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
 }
 #content-Description {
@@ -402,7 +430,6 @@ body {
     text-underline-offset: 0.2rem;
 }
 
-
 #family-pages-note {
     font-size: 4dvw;
     font-weight: bold;
@@ -420,4 +447,328 @@ body {
     text-align: center;
     margin-top: 10px;
     font-family: 'baskerville', 'Baskerville Old Face', 'Hoefler', 'Garamond', serif;
+}
+
+
+#installPromtContainer {
+    position: absolute;
+    width: 100dvw;
+    top: var(--header-height);
+    left: 0;
+    height: calc(100dvh - var(--header-height));
+    background-color: #1a1a1aa8;
+
+    display: none;
+    user-select: none;
+}
+
+#ios-installPromt {
+    display: none;
+    user-select: none;
+
+    overflow-y: scroll;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95dvw;
+    height: 60dvh;
+    background-color: #ddd7cc;
+    border-radius: 20px;
+    box-shadow: inset -4px -4px 10px #1a1a1abe;
+}
+#installPromt {
+    display: none;
+    user-select: none;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95dvw;
+    height: 55dvh;
+    background-color: #ddd7cc;
+    border-radius: 10px;
+    box-shadow: inset -4px -4px 10px #1a1a1abe;
+}
+
+.promtBanner {
+    position: sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+    background-color: #6b1d2f;
+}
+.promtCloseContainer {
+    position: absolute;
+    right: 5px;
+    display: inline;
+    cursor: pointer;
+}
+.promtCloseContainer img {
+    display: block;
+}
+.promtCloseContainer .promtCloseHover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.promtCloseContainer:hover .promtCloseHover {
+    opacity: 1;
+}
+.promtCloseContainer:hover .promtClose {
+    opacity: 0;
+}
+
+.promptContent {
+    position: absolute;
+    height: max-content;
+    width: 100%;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#installPromt .promptContent {
+    position: absolute;
+    width: 95dvw;
+    height: calc(55dvh - 50px);
+    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#iosPromtIconArea {
+    margin-top: 15px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#iosPromtIconArea img {
+    width: auto;
+    height: 28dvh;
+    border-radius: 24px;
+}
+#iosPromtIconArea h2 {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    font-size: 35px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#iosPromtIconArea p {
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#IosPromtGuideArea {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#IosPromtGuideArea h2 {
+    margin: 0;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#IosPromtGuideArea ul {
+    margin-top: 5px;
+    padding: 0;
+    width: 80%;
+    height: max-content;
+    list-style-type: none;
+}
+#IosPromtGuideArea li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: double 4px #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#IosPromtGuideArea li:first-child {
+    border-top: double 4px #1a1a1a;
+}
+.iosImg-Menu {
+    height: 14px;
+    width: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: translateY(25%);
+}
+.iosImg-Share {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: translateY(25%);
+}
+
+
+#promptContentHeader {
+    grid-column: 1/-1;
+    width: 95dvw;
+    height: calc((55dvh - 50px) * 0.15);
+    text-align: center;
+}
+#promptContentHeader h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#promptContentHeader p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#promptIconArea {
+    height: calc((55dvh - 50px) * 0.425);
+    width: calc(95dvw *.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#promptIconArea img {
+    margin-top: 20px;
+    height: auto;
+    width: 85%;
+    border-radius: 30px;
+}
+#promptBenifitsArea {
+    grid-row: span 2;
+    width: calc(95dvw *.5);
+    height: calc((55dvh - 50px) * 0.85);
+    display: flex;
+    justify-content: center;
+}
+#promptBenifitsArea ul {
+    padding: 0;
+    margin-top: 30px;
+    width: 95%;
+    height: max-content;
+    list-style-type: none;
+}
+#promptBenifitsArea li {
+    text-align: center;
+    margin: 0;
+    
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: double 4px #1a1a1a;
+    
+    font-size: 17px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+#promptBenifitsArea li:first-child {
+    border-top: double 4px #1a1a1a;
+}
+#installButtonArea {
+    margin-bottom: 10px;
+    width: calc(95dvw *.5);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#installButton {
+    height: calc(((55dvh - 50px) * 0.15));
+    width: calc(95dvw *.45);
+    background-color: #6b1d2f;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #1a1a1a;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#installButton h1 {
+    
+    font-size: 30px;
+    font-weight: 1000;
+    color: #ddd7cc;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#installButton:hover {
+    color: #ddd7cc;
+    text-decoration: underline;
+    transform: scale(1.02) translateY(-2px);
+}
+#declineButton {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: calc(((55dvh - 50px) * 0.12));
+    width: calc(95dvw *.4);
+    background-color: #ddd7cc;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #1a1a1a;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+#declineButton h2 {
+    
+    font-size: 20px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    white-space: nowrap;
+}
+#declineButton:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+    transform: scale(1.02) translateY(-2px);
 }
