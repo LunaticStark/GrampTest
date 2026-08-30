@@ -123,10 +123,6 @@ body {
 .family-button .active-name {
     opacity: 1;
 }
-.family-button .active-name .promptHide {
-    user-select: none;
-    opacity: 0;
-}
 #Allison {
     left: 9%;
     top: 19%;
@@ -456,11 +452,12 @@ body {
 
 #installPromtContainer {
     position: absolute;
-    width: 100dvw;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100dvh;
     background-color: #1a1a1aa8;
+    z-index: 10;
 
     display: none;
     user-select: none;
@@ -484,13 +481,14 @@ body {
 #installPromt {
     display: none;
     user-select: none;
+
     overflow: hidden;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 95dvw;
-    height: 55dvh;
+    height: 60dvh;
     background-color: #ddd7cc;
     border-radius: 10px;
     box-shadow: inset -4px -4px 10px #1a1a1abe;
@@ -499,7 +497,7 @@ body {
 .promtBanner {
     position: sticky;
     top: 0;
-    height: 50px;
+    height: 40px;
     width: 100%;
     z-index: 10;
     background-color: #6b1d2f;
@@ -511,6 +509,8 @@ body {
     cursor: pointer;
 }
 .promtCloseContainer img {
+    height: 39px;
+    width: auto;
     display: block;
 }
 .promtCloseContainer .promtCloseHover {
@@ -539,7 +539,7 @@ body {
 #installPromt .promptContent {
     position: absolute;
     width: 95dvw;
-    height: calc(55dvh - 50px);
+    height: calc(60dvh - 40px);
     top: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -646,12 +646,12 @@ body {
 #promptContentHeader {
     grid-column: 1/-1;
     width: 95dvw;
-    height: calc((55dvh - 50px) * 0.15);
+    height: calc((60dvh - 40px) * 0.15);
     text-align: center;
 }
 #promptContentHeader h2 {
     margin: 0;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 1000;
     color: #1a1a1a;
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
@@ -661,7 +661,7 @@ body {
 }
 #promptContentHeader p {
     margin: 0;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: #1a1a1a;
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
@@ -670,7 +670,7 @@ body {
     white-space: nowrap;
 }
 #promptIconArea {
-    height: calc((55dvh - 50px) * 0.425);
+    height: calc((60dvh - 40px) * 0.425);
     width: calc(95dvw *.5);
     display: flex;
     flex-direction: column;
@@ -679,20 +679,20 @@ body {
 }
 #promptIconArea img {
     margin-top: 20px;
-    height: auto;
-    width: 85%;
+    height: 90%;
+    width: auto;
     border-radius: 30px;
 }
 #promptBenifitsArea {
     grid-row: span 2;
     width: calc(95dvw *.5);
-    height: calc((55dvh - 50px) * 0.85);
+    height: calc((60dvh - 40px) * 0.85);
     display: flex;
     justify-content: center;
 }
 #promptBenifitsArea ul {
     padding: 0;
-    margin-top: 30px;
+    margin-top: 18px;
     width: 95%;
     height: max-content;
     list-style-type: none;
@@ -701,11 +701,11 @@ body {
     text-align: center;
     margin: 0;
     
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     border-bottom: double 4px #1a1a1a;
     
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
@@ -717,6 +717,7 @@ body {
 }
 #installButtonArea {
     margin-bottom: 10px;
+    height: calc((60dvh - 40px) * 0.425);
     width: calc(95dvw *.5);
     display: flex; 
     flex-direction: column;

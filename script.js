@@ -119,9 +119,6 @@ function showIOSInstallUI() {
     IOSPromt.style.userSelect = 'auto';
 
     document.body.style.overflowY = 'hidden';
-    document.querySelectorAll('.family-button').forEach(s =>{
-        s.classList.add('promptHide');
-    });
 };
 let deferredPromt;
 function setupChromiumInstallUI() {
@@ -141,9 +138,6 @@ function showInstallButton() {
     installPromt.style.userSelect = 'auto';
 
     document.body.style.overflowY = 'hidden';
-    document.querySelectorAll('.family-button').forEach(s =>{
-        s.classList.add('promptHide');
-    });
 };
 function triggerNativeInstall() {
     if (!deferredPromt) return;
@@ -173,9 +167,6 @@ function closePrompts() {
     installPromt.style.userSelect = 'none';
 
     document.body.style.overflowY = 'auto'
-    document.querySelectorAll('.family-button').forEach(s =>{
-        s.classList.remove('promptHide');
-    });
 
     markedAsShown();
 }
