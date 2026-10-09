@@ -1,6 +1,13 @@
+const header = document.querySelector('.main-header');
+function adjustContentPosition() {
+    const headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+}
+window.addEventListener('load', adjustContentPosition);
+window.addEventListener('resize', adjustContentPosition);
+
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
-
 menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
 });
@@ -30,6 +37,18 @@ const library = [
             "../../Art-Stuff/book-pages/AJ/AJ-page2.png",
             "../../Art-Stuff/book-pages/AJ/AJ-page3.png"
         ],
+        familySearchLinks: [
+            {
+                name: "Annetje Jans / Anneke Jans",
+                url: "https://www.familysearch.org/en/tree/person/about/27PV-5YZ",
+                note: "Do I you really need a featured note? This is the main character of the book, aswell as the person on the cover of the book, and the title of the book. ",
+            },
+            {
+                name: "Captain John Underhill I",
+                url: "https://www.familysearch.org/en/tree/person/about/LZ4F-4LQ",
+                note: `Featured in Annetje Jans as a boarish character, who starts a fight March 15 1644. First introduced in Chapter 15, "A Tavern Brawl", page 90. `,
+            },
+        ]
     },
     {
         id: 3,
@@ -54,6 +73,18 @@ const library = [
             "../../Art-Stuff/book-pages/GB/GB-page2.png",
             "../../Art-Stuff/book-pages/GB/GB-page3.png"
         ],
+        familySearchLinks: [
+            {
+                name: "Alta Lafema Hastain / Grandma B",
+                url: "https://www.familysearch.org/en/tree/person/about/27PV-5YZ",
+                note: "Although the title and cover is Grandma B she isn't what the entirety of the book is about, however she has a strong connection to everything thats mentioned in this book.",
+            },
+            {
+                name: "George Thomas Stark",
+                url: "https://www.familysearch.org/en/tree/person/about/K48C-1XZ",
+                note: "Alta Lafema hastain married George Thomas stark on December 18th, 1909 near Ladogs, California when she was 16.",
+            },
+        ]
     },
     {
         id: 5,
@@ -66,6 +97,18 @@ const library = [
             "../../Art-Stuff/book-pages/G&GM/G&GM-page2.png",
             "../../Art-Stuff/book-pages/G&GM/G&GM-page3.png"
         ],
+        familySearchLinks: [
+            {
+                name: "Howard Nin Moody (Grandpa Moody)",
+                url: "https://www.familysearch.org/en/tree/person/details/LLQF-8L1",
+                note: "Howard Nin Moody (Grandpa Moody) was born on september 15th, 1885 in Baring Plantation, Washington, Maine.",
+            },
+            {
+                name: "Ella Elmira Beach (Grandma Moody)",
+                url: "https://www.familysearch.org/en/tree/person/about/KFKG-JBD",
+                note: "Ella Elmira Beach (Grandma Moody) was a Canadian , born May 5th, 1885 in a small place known as hunter's Home, in the wilderness of New Brunswick.",
+            },
+        ]
     },
     {
         id: 6,
@@ -118,7 +161,7 @@ const library = [
             "../../Art-Stuff/book-pages/CAOS&D/CAOS&D-page3.png"
         ],
     },
-     {
+    {
         id: 11,
         title: "Exodus to Terra Bella",
         coverImage: "../../Art-Stuff/book_covers/Exodus-of-Terra-Bella.png",
@@ -130,7 +173,7 @@ const library = [
             "../../Art-Stuff/book-pages/ETTB/ETTB-page3.png"
         ],
     },
-     {
+    {
         id: 12,
         title: "Larry, Elizabeth & Girls",
         coverImage: "../../Art-Stuff/book_covers/Larrry-elizabith-&-girls.png",
@@ -142,7 +185,7 @@ const library = [
             "../../Art-Stuff/book-pages/LE&G/LE&G-page3.png"
         ],
     },
-     {
+    {
         id: 13,
         title: "Stan & Dorothy in Clarksburg",
         coverImage: "../../Art-Stuff/book_covers/Stan-&-Dorothy-Clarksburg.png",
@@ -154,7 +197,7 @@ const library = [
             "../../Art-Stuff/book-pages/S&DIC/S&DIC-page3.png"
         ],
     },
-     {
+    {
         id: 14,
         title: "Stark/Shoemaker Family Reunion 2017",
         coverImage: "../../Art-Stuff/book_covers/Stark&shoemaker-reunion.png",
@@ -166,7 +209,7 @@ const library = [
             "../../Art-Stuff/book-pages/S_SFR/S_SFR-page3.png"
         ],
     },
-     {
+    {
         id: 15,
         title: "The Stark Family at San Lucas",
         coverImage: "../../Art-Stuff/book_covers/San-lucas.png",
@@ -178,7 +221,7 @@ const library = [
             "../../Art-Stuff/book-pages/TSFASL/TSFASL-page3.png"
         ],
     },
-     {
+    {
         id: 16,
         title: "Tom, Eunice & Family",
         coverImage: "../../Art-Stuff/book_covers/Tom-Eunice-&-Family.png",
@@ -190,7 +233,7 @@ const library = [
             "../../Art-Stuff/book-pages/TE&F/TE&F-page3.png"
         ],
     },
-     {
+    {
         id: 17,
         title: "Victoria & the Mormons",
         coverImage: "../../Art-Stuff/book_covers/Victoria-&-the-Mormons.png",
@@ -202,14 +245,14 @@ const library = [
             "../../Art-Stuff/book-pages/VATM/VATM-page3.png"
         ],
     },
-     {
+    {
         id: 18,
         title: "Trijntje Jonas",
         coverImage: "../../Art-Stuff/book_covers/Trijntie-Jonas.png",
         buyLink: "#",
         description: "Trijnjte Jonas was a real woman who once was a little girl. She grew up in a family with a mother and a father. She got married and had children. After her husband died, she left the country she lived in and crossed the Atlantic Ocean to a New world.",
     },
-     {
+    {
         id: 19,
         title: "The War for Independence",
         coverImage: "../../Art-Stuff/book_covers/TWFI.png",
@@ -221,7 +264,7 @@ const library = [
             "../../Art-Stuff/book-pages/TWFI/TWFI-page3.png"
         ],
     },
-     {
+    {
         id: 20,
         title: "Private Purinton",
         coverImage: "../../Art-Stuff/book_covers/Private-purinton.png",
@@ -233,7 +276,7 @@ const library = [
             "../../Art-Stuff/book-pages/PP/PP-page3.png"
         ],
     },
-     {
+    {
         id: 21,
         title: "Sheriff Shoemaker",
         coverImage: "../../Art-Stuff/book_covers/Sheriff-shoemaker.png",
@@ -244,7 +287,8 @@ const library = [
             "../../Art-Stuff/book-pages/SS/SS-page2.png",
             "../../Art-Stuff/book-pages/SS/SS-page3.png"
         ],
-    }, {
+    }, 
+    {
         id: 22,
         title: "Stan & Dorothy at the Salt Lake Temple",
         coverImage: "../../Art-Stuff/book_covers/Salt-lake-temple.png",
@@ -255,7 +299,8 @@ const library = [
             "../../Art-Stuff/book-pages/S&DSLT/S&DSLT-page2.png",
             "../../Art-Stuff/book-pages/S&DSLT/S&DSLT-page3.png"
         ],
-    }, {
+    },
+    {
         id: 23,
         title: "John Stark & the Donner Party",
         coverImage: "../../Art-Stuff/book_covers/John-stark.png",
@@ -267,7 +312,7 @@ const library = [
             "../../Art-Stuff/book-pages/JSATDP/JSATDP-page3.png"
         ],
     },
-     {
+    {
         id: 24,
         title: "California Here I Come",
         coverImage: "../../Art-Stuff/book_covers/California.png",
@@ -279,7 +324,7 @@ const library = [
             "../../Art-Stuff/book-pages/CHIC/CHIC-page3.png"
         ],
     },
-     {
+    {
         id: 25,
         title: "The Missourian",
         coverImage: "../../Art-Stuff/book_covers/The-missourian.png",
@@ -331,6 +376,34 @@ function openInfoLayer(book) {
     const previewpage2 = document.getElementById('preview-2');
     const previewpage3 = document.getElementById('preview-3');
 
+    const familySearchLinks = document.getElementById('family-search-links');
+    const familySearchLinksContainer = document.getElementById('family-search-links-content');
+    if (book.familySearchLinks && book.familySearchLinks.length > 0) {
+        familySearchLinksContainer.innerHTML = '';
+        book.familySearchLinks.forEach(link => {
+            const familySearchContainer = document.createElement('div');
+            familySearchContainer.classList.add('family-search-link-container');
+
+            const familySearchLink = document.createElement('a');
+            familySearchLink.classList.add('family-search-link');
+            familySearchLink.href = link.url;
+            familySearchLink.target = '_blank';
+            familySearchLink.innerText = link.name;
+
+
+            const familySearchNote = document.createElement('p');
+            familySearchNote.classList.add('family-search-note');
+            familySearchNote.innerText = link.note;
+
+            familySearchContainer.appendChild(familySearchLink);
+            familySearchContainer.appendChild(familySearchNote);
+            familySearchLinksContainer.appendChild(familySearchContainer);
+            familySearchLinks.style.display = 'block';
+        });
+    } else {
+        familySearchLinks.style.display = 'none';
+    }
+        
 
     infoImage.src = book.coverImage;
     infoTitle.innerText = book.title;
