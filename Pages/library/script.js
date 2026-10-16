@@ -76,7 +76,7 @@ const library = [
         familySearchLinks: [
             {
                 name: "Alta Lafema Hastain / Grandma B",
-                url: "https://www.familysearch.org/en/tree/person/about/27PV-5YZ",
+                url: "https://www.familysearch.org/en/tree/person/about/KN65-9V5",
                 note: "Although the title and cover is Grandma B she isn't what the entirety of the book is about, however she has a strong connection to everything thats mentioned in this book.",
             },
             {
