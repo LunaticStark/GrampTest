@@ -387,7 +387,6 @@ function openInfoLayer(book) {
             const familySearchLink = document.createElement('a');
             familySearchLink.classList.add('family-search-link');
             familySearchLink.href = link.url;
-            familySearchLink.target = '_blank';
             familySearchLink.innerText = link.name;
 
 
