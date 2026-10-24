@@ -277,6 +277,7 @@ body {
 }
 .expandtion-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
@@ -288,10 +289,8 @@ body {
     font-family: 'Garamond', 'Baskerville', 'Times New Roman', serif;
 }
 .expandtion-button {
-    font-size: 2dvw;
-    font-weight: bold;
-    color: #ddd7cc;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    height: 2.3em;
+    width: auto;
     cursor: pointer;
     user-select: none;
     display: inline-block;

@@ -39,13 +39,16 @@ familyButtons.forEach(button => {
 document.querySelectorAll('.content-box').forEach(box => {
     const button = box.querySelector('.expandtion-button');
     button.addEventListener('click', () => {
+        console.log(`${button.src}`);
         const content = box.querySelector('.expandtion-content');
         content.classList.toggle('expanded');
 
         if (content.classList.contains('expanded')) {
-            button.innerHTML = '&#11165;';
+           // button.src = 'https://img.icons8.com/deco-glyph/48/ddd7cc/circled-chevron-down.png';
+           button.src = 'https://img.icons8.com/deco-glyph/48/ddd7cc/circled-chevron-up.png';
         } else {
-            button.innerHTML = '&#11167;';
+           // button.src = 'https://img.icons8.com/deco-glyph/48/ddd7cc/circled-chevron-up.png';
+            button.src = 'https://img.icons8.com/deco-glyph/48/ddd7cc/circled-chevron-down.png';
         }
 
         if (content.classList.contains('expanded')) {
@@ -63,7 +66,7 @@ document.querySelectorAll('.content-box').forEach(box => {
                 if (otherBox) {
                     const otherButton = otherBox.querySelector('.expandtion-button');
                     if (otherButton) {
-                        otherButton.innerHTML = '&#11167;';
+                        otherButton.src = 'https://img.icons8.com/deco-glyph/48/ddd7cc/circled-chevron-down.png';
                     }
                 }
             }
